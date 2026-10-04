@@ -1,0 +1,51 @@
+import random
+ny=0
+v=0
+for i in range (1000000):
+  a = [False, False, False]
+  j=random.randint(0,2)
+  a[j]=True
+
+  x=random.randint(0,2)
+  valaszt=a[x]
+
+  if valaszt==(True):
+    if x==0:
+      torol=random.randint(1,2)
+    if x==1:
+      torol=random.choice([0,1])
+    if x==2:
+      torol=random.randint(0,1)
+    a.pop(torol)
+
+    if valaszt==a[0]:
+      valaszt=a[1]
+    else :
+      valaszt=a[0]
+
+  else:
+    if x==0:
+      if a[1]==(False):
+        a.pop(1)
+      else :
+        a.pop(2)
+    if x==1:
+      if a[0]==(False):
+        a.pop(0)
+      else :
+        a.pop(2)
+    if x==2:
+      if a[0]==(False):
+        a.pop(0)
+      else :
+        a.pop(1)
+
+    if valaszt==a[0]:
+      valaszt=a[1]
+    else :
+      valaszt=a[0]
+  if valaszt==(True):
+    ny=ny+1
+  else :
+    v=v+1
+print("az esetek szama, amikor nyersz: ",ny,"az esetek szama, amikor nem nyersz", v)
