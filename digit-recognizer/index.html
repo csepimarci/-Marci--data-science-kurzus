@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101523">
+    <title>Handwritten Digit Recognizer</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family: system-ui, sans-serif;
+        background: #101523;
+        color: #f3f5fa;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        background: radial-gradient(ellipse at top, #263451, #101523 65%);
+      }
+
+      main {
+        width: min(100%, 440px);
+        padding: 28px;
+        border: 1px solid #34415a;
+        border-radius: 20px;
+        background: #171f30;
+        box-shadow: 0 24px 70px #080b1280;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: clamp(1.5rem, 6vw, 2rem);
+      }
+
+      p {
+        margin: 0;
+        color: #b4bfd1;
+        line-height: 1.5;
+      }
+
+      .pad-wrap {
+        margin: 24px 0 16px;
+        padding: 10px;
+        border: 1px solid #3c4a64;
+        border-radius: 14px;
+        background: #0a0d14;
+      }
+
+      canvas {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: 8px;
+        background: #05070b;
+        cursor: crosshair;
+        touch-action: none;
+      }
+
+      .buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      button {
+        min-height: 48px;
+        border: 0;
+        border-radius: 10px;
+        font: inherit;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      button:disabled {
+        cursor: wait;
+        opacity: 0.7;
+      }
+
+      #recognize {
+        background: #8be2c4;
+        color: #10271f;
+      }
+
+      #clear {
+        border: 1px solid #46536a;
+        background: #252f43;
+        color: #f3f5fa;
+      }
+
+      #result {
+        min-height: 76px;
+        margin-top: 16px;
+        padding: 14px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        border: 1px solid #34415a;
+        border-radius: 12px;
+        background: #111827;
+      }
+
+      #digit {
+        display: none;
+        min-width: 48px;
+        font-size: 2.5rem;
+        font-weight: 800;
+        line-height: 1;
+        text-align: center;
+        color: #8be2c4;
+      }
+
+      #message {
+        color: #c1cad9;
+      }
+
+      #message.error {
+        color: #ffb4a9;
+      }
+
+      @media (max-width: 420px) {
+        main {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Draw a number</h1>
+      <p>Draw one digit from 0 to 9 in the box with your mouse or finger.</p>
+      <div class="pad-wrap">
+        <canvas id="pad" width="280" height="280" aria-label="Digit drawing pad"></canvas>
+      </div>
+      <div class="buttons">
+        <button id="recognize" type="button">Recognize</button>
+        <button id="clear" type="button">Clear</button>
+      </div>
+      <div id="result" role="status" aria-live="polite">
+        <span id="digit" aria-hidden="true"></span>
+        <span id="message">Your prediction will appear here.</span>
+      </div>
+    </main>
+    <script>
+      const canvas = document.querySelector("#pad");
+      const context = canvas.getContext("2d");
+      const recognizeButton = document.querySelector("#recognize");
+      const clearButton = document.querySelector("#clear");
+      const digitLabel = document.querySelector("#digit");
+      const message = document.querySelector("#message");
+      const previewCanvas = document.createElement("canvas");
+      previewCanvas.width = 28;
+      previewCanvas.height = 28;
+      const previewContext = previewCanvas.getContext("2d", { willReadFrequently: true });
+      const strokes = [];
+      let activeStroke = null;
+
+      context.lineWidth = 20;
+      context.lineCap = "round";
+      context.lineJoin = "round";
+      context.strokeStyle = "#ffffff";
+      context.fillStyle = "#ffffff";
+
+      function canvasPoint(event) {
+        const bounds = canvas.getBoundingClientRect();
+        return [
+          (event.clientX - bounds.left) * canvas.width / bounds.width,
+          (event.clientY - bounds.top) * canvas.height / bounds.height,
+        ];
+      }
+
+      canvas.addEventListener("pointerdown", (event) => {
+        event.preventDefault();
+        canvas.setPointerCapture(event.pointerId);
+        activeStroke = [canvasPoint(event)];
+        strokes.push(activeStroke);
+        const [x, y] = activeStroke[0];
+        context.beginPath();
+        context.arc(x, y, context.lineWidth / 2, 0, Math.PI * 2);
+        context.fill();
+      });
+
+      canvas.addEventListener("pointermove", (event) => {
+        if (!activeStroke) return;
+        event.preventDefault();
+        const point = canvasPoint(event);
+        const previous = activeStroke[activeStroke.length - 1];
+        activeStroke.push(point);
+        context.beginPath();
+        context.moveTo(...previous);
+        context.lineTo(...point);
+        context.stroke();
+      });
+
+      function endStroke() {
+        activeStroke = null;
+      }
+
+      canvas.addEventListener("pointerup", endStroke);
+      canvas.addEventListener("pointercancel", endStroke);
+      canvas.addEventListener("lostpointercapture", endStroke);
+
+      function showMessage(text, isError = false) {
+        digitLabel.style.display = "none";
+        digitLabel.textContent = "";
+        message.textContent = text;
+        message.classList.toggle("error", isError);
+      }
+
+      function readDrawingPixels() {
+        previewContext.clearRect(0, 0, previewCanvas.width, previewCanvas.height);
+        previewContext.drawImage(canvas, 0, 0, previewCanvas.width, previewCanvas.height);
+        const rgba = previewContext.getImageData(
+          0,
+          0,
+          previewCanvas.width,
+          previewCanvas.height,
+        ).data;
+        return Array.from({ length: previewCanvas.height }, (_, y) =>
+          Array.from({ length: previewCanvas.width }, (_, x) =>
+            rgba[(y * previewCanvas.width + x) * 4],
+          ),
+        );
+      }
+
+      recognizeButton.addEventListener("click", async () => {
+        if (strokes.length === 0) {
+          showMessage("Draw a digit in the box first.", true);
+          return;
+        }
+
+        recognizeButton.disabled = true;
+        showMessage("Recognizing...");
+        try {
+          const response = await fetch("/recognize", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ pixels: readDrawingPixels() }),
+          });
+          const result = await response.json();
+          if (!response.ok) throw new Error(result.error || "Recognition failed.");
+          showMessage(`Confidence: ${Math.round(result.confidence * 100)}%`);
+          digitLabel.textContent = result.digit;
+          digitLabel.style.display = "inline";
+        } catch (error) {
+          showMessage(error.message || "Could not recognize that drawing.", true);
+        } finally {
+          recognizeButton.disabled = false;
+        }
+      });
+
+      clearButton.addEventListener("click", () => {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        strokes.length = 0;
+        activeStroke = null;
+        showMessage("Your prediction will appear here.");
+      });
+    </script>
+  </body>
+</html>
