@@ -258,7 +258,10 @@ def rasterize_strokes(
 
 
 class DigitRecognizer:
-    def __init__(self) -> None:
+    def __init__(
+        self,
+        feedback_examples: list[tuple[np.ndarray, int]] | None = None,
+    ) -> None:
         digits = load_digits()
         augmented_images, augmented_labels = augment_drawing_examples()
         augmented_nines, augmented_nine_labels = augment_nine_examples(
@@ -293,6 +296,13 @@ class DigitRecognizer:
                 browser_nine_labels,
             )
         )
+        if feedback_examples:
+            feedback_images = np.asarray(
+                [image.reshape(-1) for image, _ in feedback_examples]
+            )
+            feedback_labels = np.asarray([label for _, label in feedback_examples])
+            training_images = np.vstack((training_images, np.repeat(feedback_images, 8, axis=0)))
+            training_labels = np.concatenate((training_labels, np.repeat(feedback_labels, 8)))
         self.model = CalibratedClassifierCV(
             SVC(C=10, gamma="scale", random_state=42),
             cv=5,
@@ -301,9 +311,12 @@ class DigitRecognizer:
         self.model.fit(training_images, training_labels)
 
     def predict(self, image: np.ndarray) -> tuple[int, float]:
-        probabilities = self.model.predict_proba(image.reshape(1, -1))[0]
+        probabilities = self.predict_probabilities(image)
         best_index = int(np.argmax(probabilities))
         return int(self.model.classes_[best_index]), float(probabilities[best_index])
+
+    def predict_probabilities(self, image: np.ndarray) -> np.ndarray:
+        return self.model.predict_proba(image.reshape(1, -1))[0]
 
 
 class DigitPad:
@@ -405,3 +418,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

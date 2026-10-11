@@ -27,12 +27,116 @@
       }
 
       main {
-        width: min(100%, 440px);
+        width: min(100%, 900px);
         padding: 28px;
         border: 1px solid #34415a;
         border-radius: 20px;
         background: #171f30;
         box-shadow: 0 24px 70px #080b1280;
+      }
+
+      .workspace {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(230px, 0.72fr);
+        gap: 22px;
+        align-items: start;
+        margin-top: 22px;
+      }
+
+      .drawing-column {
+        min-width: 0;
+      }
+
+      .explanation {
+        min-width: 0;
+        padding: 18px;
+        border: 1px solid #34415a;
+        border-radius: 12px;
+        background: #111827;
+      }
+
+      .explanation h2 {
+        margin: 0 0 10px;
+        font-size: 1.05rem;
+      }
+
+      .explanation h3 {
+        margin: 18px 0 10px;
+        color: #f3f5fa;
+        font-size: 0.9rem;
+      }
+
+      .explanation p {
+        font-size: 0.9rem;
+      }
+
+      #alternatives {
+        display: grid;
+        gap: 10px;
+      }
+
+      .model-preview {
+        margin-top: 18px;
+        padding-top: 8px;
+        border-top: 1px solid #34415a;
+      }
+
+      .model-preview h3 {
+        margin: 0 0 10px;
+        font-size: 0.9rem;
+      }
+
+      .model-preview-box {
+        width: min(100%, 130px);
+        padding: 8px;
+        border: 1px solid #34415a;
+        border-radius: 10px;
+        background: #0a0d14;
+      }
+
+      #model-preview {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: 6px;
+        background: #05070b;
+      }
+
+      .model-preview-caption {
+        margin-top: 8px;
+        font-size: 0.8rem;
+        color: #b4bfd1;
+      }
+
+      .alternative {
+        display: grid;
+        grid-template-columns: 22px minmax(0, 1fr) 38px;
+        gap: 9px;
+        align-items: center;
+        font-size: 0.85rem;
+      }
+
+      .alternative-digit {
+        font-weight: 750;
+      }
+
+      .alternative-track {
+        height: 7px;
+        overflow: hidden;
+        border-radius: 4px;
+        background: #34415a;
+      }
+
+      .alternative-track span {
+        display: block;
+        height: 100%;
+        border-radius: inherit;
+        background: #8be2c4;
+      }
+
+      .alternative-score {
+        color: #b4bfd1;
+        text-align: right;
       }
 
       h1 {
@@ -125,9 +229,69 @@
         color: #ffb4a9;
       }
 
+      #correction-toggle {
+        width: 100%;
+        margin-top: 12px;
+        border: 1px solid #46536a;
+        background: #252f43;
+        color: #f3f5fa;
+      }
+
+      #correction-panel {
+        margin-top: 12px;
+      }
+
+      #correction-panel[hidden],
+      #correction-toggle[hidden] {
+        display: none;
+      }
+
+      #correction-panel p {
+        margin-bottom: 8px;
+      }
+
+      #correction-form {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 8px;
+      }
+
+      #correct-digit {
+        min-width: 0;
+        height: 48px;
+        border: 1px solid #46536a;
+        border-radius: 10px;
+        padding: 0 12px;
+        background: #111827;
+        color: #f3f5fa;
+        font: inherit;
+      }
+
+      #submit-correction {
+        padding: 0 14px;
+        background: #f1a978;
+        color: #2a1b12;
+      }
+
+      #analysis {
+        margin-top: 10px;
+        font-size: 0.9rem;
+      }
+
       @media (max-width: 420px) {
         main {
           padding: 20px;
+        }
+      }
+
+      @media (max-width: 680px) {
+        main {
+          width: min(100%, 480px);
+        }
+
+        .workspace {
+          grid-template-columns: 1fr;
+          gap: 16px;
         }
       }
     </style>
@@ -136,16 +300,44 @@
     <main>
       <h1>Draw a number</h1>
       <p>Draw one digit from 0 to 9 in the box with your mouse or finger.</p>
-      <div class="pad-wrap">
-        <canvas id="pad" width="280" height="280" aria-label="Digit drawing pad"></canvas>
-      </div>
-      <div class="buttons">
-        <button id="recognize" type="button">Recognize</button>
-        <button id="clear" type="button">Clear</button>
-      </div>
-      <div id="result" role="status" aria-live="polite">
-        <span id="digit" aria-hidden="true"></span>
-        <span id="message">Your prediction will appear here.</span>
+      <div class="workspace">
+        <section class="drawing-column" aria-label="Draw and recognize a digit">
+          <div class="pad-wrap">
+            <canvas id="pad" width="280" height="280" aria-label="Digit drawing pad"></canvas>
+          </div>
+          <div class="buttons">
+            <button id="recognize" type="button">Recognize</button>
+            <button id="clear" type="button">Clear</button>
+          </div>
+          <div id="result" role="status" aria-live="polite">
+            <span id="digit" aria-hidden="true"></span>
+            <span id="message">Your prediction will appear here.</span>
+          </div>
+          <button id="correction-toggle" type="button" hidden>Wrong? Enter the correct digit</button>
+          <section id="correction-panel" hidden aria-labelledby="correction-label">
+            <p id="correction-label">What digit did you actually draw?</p>
+            <form id="correction-form">
+              <input id="correct-digit" type="number" min="0" max="9" step="1" required placeholder="0 to 9" aria-label="Correct digit">
+              <button id="submit-correction" type="submit">Teach the model</button>
+            </form>
+            <p id="analysis" aria-live="polite"></p>
+          </section>
+        </section>
+        <aside class="explanation" aria-labelledby="explanation-title">
+          <h2 id="explanation-title">What the model checks</h2>
+          <p>It crops and centers your stroke, scales it to 8 × 8 pixels, then compares its pattern with learned handwritten-digit examples. It scores all digits from 0 to 9; the highest score is shown as the guess.</p>
+          <h3>Other possible digits</h3>
+          <div id="alternatives" aria-live="polite">
+            <p>Draw and recognize a digit to see the closest matches.</p>
+          </div>
+          <div class="model-preview" aria-live="polite">
+            <h3>Model input preview</h3>
+            <div class="model-preview-box">
+              <canvas id="model-preview" width="84" height="84" aria-label="28 by 28 model input preview"></canvas>
+            </div>
+            <p class="model-preview-caption">This is the 28 × 28 grayscale version the classifier actually reads.</p>
+          </div>
+        </aside>
       </div>
     </main>
     <script>
@@ -155,6 +347,15 @@
       const clearButton = document.querySelector("#clear");
       const digitLabel = document.querySelector("#digit");
       const message = document.querySelector("#message");
+      const correctionToggle = document.querySelector("#correction-toggle");
+      const correctionPanel = document.querySelector("#correction-panel");
+      const correctionForm = document.querySelector("#correction-form");
+      const correctDigit = document.querySelector("#correct-digit");
+      const submitCorrection = document.querySelector("#submit-correction");
+      const analysis = document.querySelector("#analysis");
+      const alternatives = document.querySelector("#alternatives");
+      const modelPreviewCanvas = document.querySelector("#model-preview");
+      const modelPreviewContext = modelPreviewCanvas.getContext("2d");
       const previewCanvas = document.createElement("canvas");
       previewCanvas.width = 28;
       previewCanvas.height = 28;
@@ -185,6 +386,7 @@
         context.beginPath();
         context.arc(x, y, context.lineWidth / 2, 0, Math.PI * 2);
         context.fill();
+        renderModelPreview();
       });
 
       canvas.addEventListener("pointermove", (event) => {
@@ -197,6 +399,7 @@
         context.moveTo(...previous);
         context.lineTo(...point);
         context.stroke();
+        renderModelPreview();
       });
 
       function endStroke() {
@@ -230,6 +433,40 @@
         );
       }
 
+      function renderModelPreview() {
+        const pixels = readDrawingPixels();
+        modelPreviewContext.fillStyle = "#05070b";
+        modelPreviewContext.fillRect(0, 0, modelPreviewCanvas.width, modelPreviewCanvas.height);
+
+        for (let y = 0; y < 28; y += 1) {
+          for (let x = 0; x < 28; x += 1) {
+            const value = pixels[y][x];
+            modelPreviewContext.fillStyle = `rgba(${255 - value}, ${255 - value}, ${255 - value}, 1)`;
+            modelPreviewContext.fillRect(x * 3, y * 3, 3, 3);
+          }
+        }
+      }
+
+      function showAlternatives(items) {
+        alternatives.replaceChildren(...items.map(({ digit, score }) => {
+          const row = document.createElement("div");
+          row.className = "alternative";
+          const label = document.createElement("span");
+          label.className = "alternative-digit";
+          label.textContent = digit;
+          const track = document.createElement("span");
+          track.className = "alternative-track";
+          const fill = document.createElement("span");
+          fill.style.width = `${Math.round(score * 100)}%`;
+          track.append(fill);
+          const value = document.createElement("span");
+          value.className = "alternative-score";
+          value.textContent = `${Math.round(score * 100)}%`;
+          row.append(label, track, value);
+          return row;
+        }));
+      }
+
       recognizeButton.addEventListener("click", async () => {
         if (strokes.length === 0) {
           showMessage("Draw a digit in the box first.", true);
@@ -249,6 +486,11 @@
           showMessage(`Confidence: ${Math.round(result.confidence * 100)}%`);
           digitLabel.textContent = result.digit;
           digitLabel.style.display = "inline";
+          showAlternatives(result.alternatives);
+          correctionToggle.hidden = false;
+          correctionPanel.hidden = true;
+          correctDigit.value = "";
+          analysis.textContent = "";
         } catch (error) {
           showMessage(error.message || "Could not recognize that drawing.", true);
         } finally {
@@ -256,12 +498,57 @@
         }
       });
 
+      correctionToggle.addEventListener("click", () => {
+        correctionToggle.hidden = true;
+        correctionPanel.hidden = false;
+        correctDigit.focus();
+      });
+
+      correctionForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        if (strokes.length === 0 || !correctDigit.reportValidity()) return;
+
+        submitCorrection.disabled = true;
+        analysis.textContent = "Saving your correction, then retraining the model on this exact drawing...";
+        try {
+          const response = await fetch("/feedback", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              pixels: readDrawingPixels(),
+              label: Number(correctDigit.value),
+            }),
+          });
+          let result;
+          try {
+            result = await response.json();
+          } catch {
+            throw new Error(`The server returned an unexpected response (HTTP ${response.status}).`);
+          }
+          if (!response.ok) throw new Error(result.error || "Could not save the correction.");
+          analysis.textContent = `${result.message} ${result.analysis} This saves the current sketch and its true label, then rebuilds the classifier with that example.`;
+          correctDigit.disabled = true;
+        } catch (error) {
+          analysis.textContent = error.message || "Could not save the correction.";
+        } finally {
+          submitCorrection.disabled = false;
+        }
+      });
+
       clearButton.addEventListener("click", () => {
         context.clearRect(0, 0, canvas.width, canvas.height);
         strokes.length = 0;
         activeStroke = null;
+        correctionToggle.hidden = true;
+        correctionPanel.hidden = true;
+        correctDigit.disabled = false;
+        analysis.textContent = "";
+        modelPreviewContext.fillStyle = "#05070b";
+        modelPreviewContext.fillRect(0, 0, modelPreviewCanvas.width, modelPreviewCanvas.height);
         showMessage("Your prediction will appear here.");
       });
+
+      renderModelPreview();
     </script>
   </body>
 </html>
