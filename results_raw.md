@@ -1,1 +1,3 @@
+```text
 az esetek szama, amikor nyersz:  666463 az esetek szama, amikor nem nyersz 333537
+```

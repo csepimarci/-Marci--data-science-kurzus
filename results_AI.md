@@ -1,3 +1,5 @@
+```text
 Trials: 1000000
 Stay wins: 334573 (33.46%)
 Switch wins: 665427 (66.54%)
+```

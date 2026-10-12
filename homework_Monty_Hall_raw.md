@@ -1,3 +1,4 @@
+```python
 import random
 ny=0
 v=0
@@ -49,3 +50,4 @@ for i in range (1000000):
   else :
     v=v+1
 print("az esetek szama, amikor nyersz: ",ny,"az esetek szama, amikor nem nyersz", v)
+```

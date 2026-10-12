@@ -1,0 +1,4 @@
+```text
+Flask>=3.1,<4
+scikit-learn>=1.6,<2
+```
