@@ -119,8 +119,8 @@ def month_index(observation_date):
 
 
 def render_svg(rows, summary):
-    width, height = 1280, 780
-    left, right, top, bottom = 92, 1230, 272, 662
+    width, height = 1280, 770
+    left, right, top, bottom = 100, 1232, 230, 638
     first_month = month_index(rows[0]["date"])
     last_month = month_index(rows[-1]["date"])
     max_billions = max(
@@ -148,11 +148,15 @@ def render_svg(rows, summary):
         ("M" if index == 0 else "L") + f" {x:.2f} {y:.2f}"
         for index, (x, y, _) in enumerate(points)
     )
+    september_marker = date(2001, 9, 1)
+    covid_marker = date(2020, 4, 1)
+    september_x = x_position(september_marker)
+    covid_x = x_position(covid_marker)
 
     elements = [
         f'<svg xmlns="http://www.w3.org/2000/svg" role="img" '
         f'aria-labelledby="title description" viewBox="0 0 {width} {height}">',
-        "<title id=\"title\">Two shocks, two recoveries: U.S. airline travel</title>",
+        "<title id=\"title\">U.S. airline passenger travel after 9/11 and COVID-19</title>",
         (
             '<desc id="description">Monthly seasonally adjusted U.S. scheduled '
             "passenger-flight revenue passenger-miles from "
@@ -161,67 +165,58 @@ def render_svg(rows, summary):
             "96.7 percent decline between February and April 2020 are highlighted."
             "</desc>"
         ),
-        '<rect width="100%" height="100%" fill="#f5f8fb"/>',
-        '<text x="70" y="58" fill="#152b3c" font-family="Arial, sans-serif" '
-        'font-size="34" font-weight="700">Two shocks, two recoveries</text>',
-        '<text x="72" y="91" fill="#526778" font-family="Arial, sans-serif" '
-        'font-size="17">U.S. airline passenger travel fell after 9/11 — then '
-        "collapsed further during COVID-19</text>",
+        '<rect width="100%" height="100%" fill="#0d2a20"/>',
+        '<text x="78" y="57" fill="#e9e4d2" font-family="Arial, sans-serif" '
+        'font-size="29" font-weight="700">U.S. airline passenger travel after '
+        "9/11 and COVID-19</text>",
+        '<text x="80" y="88" fill="#b9c2b3" font-family="Arial, sans-serif" '
+        'font-size="15">Monthly revenue passenger-miles, seasonally adjusted · '
+        f'{rows[0]["date"].year}–{rows[-1]["date"].strftime("%B %Y")}</text>',
+        f'<text x="{september_x:.2f}" y="137" text-anchor="middle" '
+        'fill="#d1a13a" font-family="Arial, sans-serif" '
+        'font-size="13" font-weight="700">SEPTEMBER 2001</text>',
+        f'<text x="{september_x:.2f}" y="160" text-anchor="middle" '
+        'fill="#e9e4d2" font-family="Arial, sans-serif" '
+        f'font-size="16">−{abs(summary["sep_2001_change"]):.1f}% from August</text>',
+        f'<line x1="{september_x:.2f}" y1="171" x2="{september_x:.2f}" '
+        'y2="210" stroke="#d1a13a" stroke-width="1.5"/>',
+        f'<text x="{covid_x:.2f}" y="137" text-anchor="middle" '
+        'fill="#c1543a" font-family="Arial, sans-serif" '
+        'font-size="13" font-weight="700">COVID-19 · APRIL 2020 LOW</text>',
+        f'<text x="{covid_x:.2f}" y="160" text-anchor="middle" '
+        'fill="#e9e4d2" font-family="Arial, sans-serif" '
+        f'font-size="16">−{abs(summary["covid_change"]):.1f}% from February</text>',
+        f'<line x1="{covid_x:.2f}" y1="171" x2="{covid_x:.2f}" '
+        'y2="210" stroke="#c1543a" stroke-width="1.5"/>',
     ]
-
-    cards = [
-        {
-            "x": 72,
-            "width": 500,
-            "color": "#7357a6",
-            "label": "AFTER 9/11  ·  AUG–SEP 2001",
-            "value": f'{summary["sep_2001_change"]:.1f}%',
-            "detail": "month-over-month change in seasonally adjusted RPMs",
-        },
-        {
-            "x": 592,
-            "width": 616,
-            "color": "#cf573e",
-            "label": "COVID-19  ·  FEB–APR 2020",
-            "value": f'{summary["covid_change"]:.1f}%',
-            "detail": "month-over-month change in seasonally adjusted RPMs",
-        },
-    ]
-    for card in cards:
-        elements.extend(
-            [
-                f'<rect x="{card["x"]}" y="116" width="{card["width"]}" '
-                'height="116" rx="12" fill="#ffffff" stroke="#e0e8ee"/>',
-                f'<rect x="{card["x"]}" y="116" width="5" height="116" '
-                f'rx="2" fill="{card["color"]}"/>',
-                f'<text x="{card["x"] + 22}" y="144" fill="{card["color"]}" '
-                'font-family="Arial, sans-serif" font-size="13" '
-                f'font-weight="700">{card["label"]}</text>',
-                f'<text x="{card["x"] + 22}" y="194" fill="#152b3c" '
-                'font-family="Arial, sans-serif" font-size="38" '
-                f'font-weight="700">{card["value"]}</text>',
-                f'<text x="{card["x"] + 145}" y="188" fill="#526778" '
-                'font-family="Arial, sans-serif" font-size="14">'
-                f'{card["detail"]}</text>',
-            ]
-        )
 
     plot_width = right - left
     plot_height = bottom - top
     elements.append(
         f'<rect x="{left}" y="{top}" width="{plot_width}" height="{plot_height}" '
-        'fill="#ffffff" stroke="#dfe7ed"/>'
+        'fill="#123626" stroke="#355344" stroke-width="1"/>'
     )
     for billions in range(0, y_max + 1, 20):
         y = y_position(billions)
         elements.extend(
             [
                 f'<line x1="{left}" y1="{y:.2f}" x2="{right}" y2="{y:.2f}" '
-                'stroke="#e5ebf0" stroke-width="1"/>',
+                'stroke="#355344" stroke-width="1"/>',
                 f'<text x="{left - 14}" y="{y + 5:.2f}" text-anchor="end" '
-                'fill="#607483" font-family="Arial, sans-serif" font-size="13">'
+                'fill="#b9c2b3" font-family="Arial, sans-serif" font-size="13">'
                 f"{billions}</text>",
             ]
+        )
+
+    for event_date, color in (
+        (september_marker, "#d1a13a"),
+        (covid_marker, "#c1543a"),
+    ):
+        x = x_position(event_date)
+        elements.append(
+            f'<line x1="{x:.2f}" y1="{top}" x2="{x:.2f}" y2="{bottom}" '
+            f'stroke="{color}" stroke-width="1.3" stroke-dasharray="5 5" '
+            'opacity="0.85"/>'
         )
 
     first_year = (rows[0]["date"].year // 5) * 5
@@ -232,61 +227,40 @@ def render_svg(rows, summary):
             elements.extend(
                 [
                     f'<line x1="{x:.2f}" y1="{top}" x2="{x:.2f}" '
-                    f'y2="{bottom}" stroke="#eff3f6"/>',
+                    f'y2="{bottom}" stroke="#29483b"/>',
                     f'<text x="{x:.2f}" y="{bottom + 26}" text-anchor="middle" '
-                    'fill="#607483" font-family="Arial, sans-serif" '
+                    'fill="#b9c2b3" font-family="Arial, sans-serif" '
                     f'font-size="13">{year}</text>',
                 ]
             )
 
-    event_markers = [
-        (date(2001, 9, 1), "#7357a6"),
-        (date(2020, 4, 1), "#cf573e"),
-    ]
-    for event_date, color in event_markers:
-        x = x_position(event_date)
-        elements.append(
-            f'<line x1="{x:.2f}" y1="{top}" x2="{x:.2f}" y2="{bottom}" '
-            f'stroke="{color}" stroke-width="1.5" stroke-dasharray="5 5" '
-            'opacity="0.78"/>'
-        )
-
     elements.extend(
         [
-            f'<path d="{line_path}" fill="none" stroke="#176b87" '
-            'stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>',
-            '<text x="72" y="260" fill="#526778" '
+            f'<path d="{line_path}" fill="none" stroke="#d1a13a" '
+            'stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>',
+            '<text x="38" y="434" transform="rotate(-90 38 434)" '
+            'text-anchor="middle" fill="#e9e4d2" '
             'font-family="Arial, sans-serif" font-size="13">'
-            "Revenue passenger-miles (billions; seasonally adjusted)</text>",
+            "Revenue passenger-miles (billions)</text>",
         ]
     )
-    for event_date, color in event_markers:
+    for event_date, color in (
+        (september_marker, "#d1a13a"),
+        (covid_marker, "#c1543a"),
+    ):
         event_row = next(row for row in rows if row["date"] == event_date)
         elements.append(
             f'<circle cx="{x_position(event_date):.2f}" '
             f'cy="{y_position(event_row["rpm_seasonally_adjusted_thousands"] / 1_000_000):.2f}" '
-            f'r="5.5" fill="{color}" stroke="#ffffff" stroke-width="2"/>'
+            f'r="5.5" fill="{color}" stroke="#0d2a20" stroke-width="2"/>'
         )
 
     elements.extend(
         [
-            '<line x1="72" y1="718" x2="105" y2="718" stroke="#176b87" '
-            'stroke-width="3"/>',
-            '<text x="114" y="723" fill="#344c5d" '
-            'font-family="Arial, sans-serif" font-size="13">'
-            "Seasonally adjusted monthly RPMs</text>",
-            '<line x1="366" y1="718" x2="389" y2="718" stroke="#7357a6" '
-            'stroke-width="2" stroke-dasharray="5 4"/>',
-            '<text x="398" y="723" fill="#344c5d" '
-            'font-family="Arial, sans-serif" font-size="13">September 2001</text>',
-            '<line x1="548" y1="718" x2="571" y2="718" stroke="#cf573e" '
-            'stroke-width="2" stroke-dasharray="5 4"/>',
-            '<text x="580" y="723" fill="#344c5d" '
-            'font-family="Arial, sans-serif" font-size="13">April 2020</text>',
-            '<text x="72" y="758" fill="#607483" '
+            '<text x="100" y="715" fill="#b9c2b3" '
             'font-family="Arial, sans-serif" font-size="12">'
-            "Source: U.S. BTS. BTS reports RPMs in thousands; values are shown "
-            "here in billions.</text>",
+            "Source: U.S. Bureau of Transportation Statistics. RPMs shown in "
+            "billions; published source values are in thousands.</text>",
             "</svg>",
         ]
     )

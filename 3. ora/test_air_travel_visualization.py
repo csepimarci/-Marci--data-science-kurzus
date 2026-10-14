@@ -41,9 +41,11 @@ class AirTravelVisualizationTests(unittest.TestCase):
     def test_chart_identifies_measure_and_events(self):
         summary = event_summary(self.rows)
         svg = render_svg(self.rows, summary)
-        self.assertIn("Seasonally adjusted monthly RPMs", svg)
-        self.assertIn("AUG–SEP 2001", svg)
-        self.assertIn("FEB–APR 2020", svg)
+        self.assertIn("U.S. airline passenger travel after 9/11 and COVID-19", svg)
+        self.assertIn("SEPTEMBER 2001", svg)
+        self.assertIn("COVID-19 · APRIL 2020 LOW", svg)
+        self.assertIn('fill="#0d2a20"', svg)
+        self.assertNotIn("rx=", svg)
         self.assertIn("<svg", svg)
 
 

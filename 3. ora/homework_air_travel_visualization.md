@@ -1,5 +1,10 @@
 # Two shocks, two recoveries: U.S. airline passenger travel
 
+![Line chart titled “U.S. airline passenger travel after 9/11 and COVID-19.” The seasonally adjusted monthly passenger-mile series is annotated with the September 2001 decline and the April 2020 low.](./air_travel_disruptions.svg)
+
+*Figure 1. Monthly U.S. airline revenue passenger-miles. Dashed lines mark the
+two disruption points; percentages show the change from the comparison month.*
+
 ## Executive summary
 
 Monthly U.S. airline passenger-miles show two sharp contractions in the period
@@ -81,6 +86,8 @@ the live source; results may change as BTS publishes new monthly observations.
 
 ## References
 
+### Data and historical context
+
 1. U.S. Bureau of Transportation Statistics (BTS). *Transportation Services
    Index and Seasonally-Adjusted Transportation Data*. Dataset and series
    definitions, including RPM and seasonally adjusted RPM units. Retrieved
@@ -95,3 +102,12 @@ the live source; results may change as BTS publishes new monthly observations.
 4. Centers for Disease Control and Prevention. *CDC Museum COVID-19 Timeline*.
    Historical context for the COVID-19 public-health emergency.
    <https://www.cdc.gov/museum/timeline/covid19.html>
+
+### Course reference for visual design
+
+5. Kárpáti, András. *Üzleti analitika és cégértékelés*, Session 2: Forecasting
+   and evaluation. The chart uses the lecture materials' dark-green, gold, and
+   terracotta palette as visual inspiration; the lecture is not a source for
+   the airline data or the event estimates.
+   [Lecture slides and materials](https://github.com/karpatika92/nasz_data_science_course/tree/master/lectures/01-uzleti-analitika-es-cegertekeles/session-2-forecast-es-ertekeles)
+   · [State-diagram source](https://github.com/karpatika92/nasz_data_science_course/blob/master/lectures/01-uzleti-analitika-es-cegertekeles/session-2-forecast-es-ertekeles/generate_state_diagram.py)
