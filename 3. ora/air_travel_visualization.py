@@ -165,52 +165,52 @@ def render_svg(rows, summary):
             "96.7 percent decline between February and April 2020 are highlighted."
             "</desc>"
         ),
-        '<rect width="100%" height="100%" fill="#0d2a20"/>',
-        '<text x="78" y="57" fill="#e9e4d2" font-family="Arial, sans-serif" '
+        '<rect width="100%" height="100%" fill="#172b4d"/>',
+        '<text x="78" y="57" fill="#f1f4f8" font-family="Arial, sans-serif" '
         'font-size="29" font-weight="700">U.S. airline passenger travel after '
         "9/11 and COVID-19</text>",
-        '<text x="80" y="88" fill="#b9c2b3" font-family="Arial, sans-serif" '
+        '<text x="80" y="88" fill="#c3cfdd" font-family="Arial, sans-serif" '
         'font-size="15">Monthly revenue passenger-miles, seasonally adjusted · '
         f'{rows[0]["date"].year}–{rows[-1]["date"].strftime("%B %Y")}</text>',
         f'<text x="{september_x:.2f}" y="137" text-anchor="middle" '
-        'fill="#d1a13a" font-family="Arial, sans-serif" '
+        'fill="#b39ddb" font-family="Arial, sans-serif" '
         'font-size="13" font-weight="700">SEPTEMBER 2001</text>',
         f'<text x="{september_x:.2f}" y="160" text-anchor="middle" '
-        'fill="#e9e4d2" font-family="Arial, sans-serif" '
+        'fill="#f1f4f8" font-family="Arial, sans-serif" '
         f'font-size="16">−{abs(summary["sep_2001_change"]):.1f}% from August</text>',
         f'<line x1="{september_x:.2f}" y1="171" x2="{september_x:.2f}" '
-        'y2="210" stroke="#d1a13a" stroke-width="1.5"/>',
+        'y2="210" stroke="#b39ddb" stroke-width="1.5"/>',
         f'<text x="{covid_x:.2f}" y="137" text-anchor="middle" '
-        'fill="#c1543a" font-family="Arial, sans-serif" '
+        'fill="#ff8a75" font-family="Arial, sans-serif" '
         'font-size="13" font-weight="700">COVID-19 · APRIL 2020 LOW</text>',
         f'<text x="{covid_x:.2f}" y="160" text-anchor="middle" '
-        'fill="#e9e4d2" font-family="Arial, sans-serif" '
+        'fill="#f1f4f8" font-family="Arial, sans-serif" '
         f'font-size="16">−{abs(summary["covid_change"]):.1f}% from February</text>',
         f'<line x1="{covid_x:.2f}" y1="171" x2="{covid_x:.2f}" '
-        'y2="210" stroke="#c1543a" stroke-width="1.5"/>',
+        'y2="210" stroke="#ff8a75" stroke-width="1.5"/>',
     ]
 
     plot_width = right - left
     plot_height = bottom - top
     elements.append(
         f'<rect x="{left}" y="{top}" width="{plot_width}" height="{plot_height}" '
-        'fill="#123626" stroke="#355344" stroke-width="1"/>'
+        'fill="#20395f" stroke="#395174" stroke-width="1"/>'
     )
     for billions in range(0, y_max + 1, 20):
         y = y_position(billions)
         elements.extend(
             [
                 f'<line x1="{left}" y1="{y:.2f}" x2="{right}" y2="{y:.2f}" '
-                'stroke="#355344" stroke-width="1"/>',
+                'stroke="#395174" stroke-width="1"/>',
                 f'<text x="{left - 14}" y="{y + 5:.2f}" text-anchor="end" '
-                'fill="#b9c2b3" font-family="Arial, sans-serif" font-size="13">'
+                'fill="#c3cfdd" font-family="Arial, sans-serif" font-size="13">'
                 f"{billions}</text>",
             ]
         )
 
     for event_date, color in (
-        (september_marker, "#d1a13a"),
-        (covid_marker, "#c1543a"),
+        (september_marker, "#b39ddb"),
+        (covid_marker, "#ff8a75"),
     ):
         x = x_position(event_date)
         elements.append(
@@ -227,37 +227,37 @@ def render_svg(rows, summary):
             elements.extend(
                 [
                     f'<line x1="{x:.2f}" y1="{top}" x2="{x:.2f}" '
-                    f'y2="{bottom}" stroke="#29483b"/>',
+                    f'y2="{bottom}" stroke="#314a6c"/>',
                     f'<text x="{x:.2f}" y="{bottom + 26}" text-anchor="middle" '
-                    'fill="#b9c2b3" font-family="Arial, sans-serif" '
+                    'fill="#c3cfdd" font-family="Arial, sans-serif" '
                     f'font-size="13">{year}</text>',
                 ]
             )
 
     elements.extend(
         [
-            f'<path d="{line_path}" fill="none" stroke="#d1a13a" '
+            f'<path d="{line_path}" fill="none" stroke="#58c4dd" '
             'stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>',
             '<text x="38" y="434" transform="rotate(-90 38 434)" '
-            'text-anchor="middle" fill="#e9e4d2" '
+            'text-anchor="middle" fill="#f1f4f8" '
             'font-family="Arial, sans-serif" font-size="13">'
             "Revenue passenger-miles (billions)</text>",
         ]
     )
     for event_date, color in (
-        (september_marker, "#d1a13a"),
-        (covid_marker, "#c1543a"),
+        (september_marker, "#b39ddb"),
+        (covid_marker, "#ff8a75"),
     ):
         event_row = next(row for row in rows if row["date"] == event_date)
         elements.append(
             f'<circle cx="{x_position(event_date):.2f}" '
             f'cy="{y_position(event_row["rpm_seasonally_adjusted_thousands"] / 1_000_000):.2f}" '
-            f'r="5.5" fill="{color}" stroke="#0d2a20" stroke-width="2"/>'
+            f'r="5.5" fill="{color}" stroke="#172b4d" stroke-width="2"/>'
         )
 
     elements.extend(
         [
-            '<text x="100" y="715" fill="#b9c2b3" '
+            '<text x="100" y="715" fill="#c3cfdd" '
             'font-family="Arial, sans-serif" font-size="12">'
             "Source: U.S. Bureau of Transportation Statistics. RPMs shown in "
             "billions; published source values are in thousands.</text>",

@@ -44,7 +44,8 @@ class AirTravelVisualizationTests(unittest.TestCase):
         self.assertIn("U.S. airline passenger travel after 9/11 and COVID-19", svg)
         self.assertIn("SEPTEMBER 2001", svg)
         self.assertIn("COVID-19 · APRIL 2020 LOW", svg)
-        self.assertIn('fill="#0d2a20"', svg)
+        self.assertIn('fill="#172b4d"', svg)
+        self.assertIn('stroke="#58c4dd"', svg)
         self.assertNotIn("rx=", svg)
         self.assertIn("<svg", svg)
 

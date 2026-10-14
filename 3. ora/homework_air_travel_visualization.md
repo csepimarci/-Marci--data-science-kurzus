@@ -7,18 +7,16 @@ two disruption points; percentages show the change from the comparison month.*
 
 ## Executive summary
 
-Monthly U.S. airline passenger-miles show two sharp contractions in the period
-covered by the chart. Seasonally adjusted revenue passenger-miles fell **29.5%**
-from August to September 2001, immediately after the September 11 attacks. They
-then fell **96.7%** from February to April 2020 during the COVID-19 pandemic.
-The pandemic-era contraction was therefore far deeper in this series. By the
-latest complete observation available when this analysis was prepared (July
-2026), adjusted passenger-miles had risen to **93.3 billion**, above the
-February 2020 level of **87.8 billion**.
-
-The chart makes a descriptive comparison, not a causal estimate: monthly totals
-cannot isolate the effects of either event from other changes in demand and
-airline operations.
+- The monthly seasonally adjusted series fell **29.5%** from August to September
+  2001, immediately after the September 11 attacks.
+- It fell **96.7%** from February to April 2020 during the COVID-19 pandemic:
+  a much deeper drop than the September 2001 decline.
+- By July 2026, the latest complete observation in the downloaded data,
+  passenger-miles had recovered to **93.3 billion**, above February 2020's
+  **87.8 billion**.
+- These figures describe changes in the series; they do not isolate either
+  event's causal effect from other changes in travel demand and airline
+  operations.
 
 ## The story behind the data
 
@@ -102,12 +100,3 @@ the live source; results may change as BTS publishes new monthly observations.
 4. Centers for Disease Control and Prevention. *CDC Museum COVID-19 Timeline*.
    Historical context for the COVID-19 public-health emergency.
    <https://www.cdc.gov/museum/timeline/covid19.html>
-
-### Course reference for visual design
-
-5. Kárpáti, András. *Üzleti analitika és cégértékelés*, Session 2: Forecasting
-   and evaluation. The chart uses the lecture materials' dark-green, gold, and
-   terracotta palette as visual inspiration; the lecture is not a source for
-   the airline data or the event estimates.
-   [Lecture slides and materials](https://github.com/karpatika92/nasz_data_science_course/tree/master/lectures/01-uzleti-analitika-es-cegertekeles/session-2-forecast-es-ertekeles)
-   · [State-diagram source](https://github.com/karpatika92/nasz_data_science_course/blob/master/lectures/01-uzleti-analitika-es-cegertekeles/session-2-forecast-es-ertekeles/generate_state_diagram.py)
