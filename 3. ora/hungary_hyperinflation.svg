@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title description" viewBox="0 0 1200 770">
+<title id="title">Hungary’s 1946 hyperinflation and the adópengő index</title>
+<desc id="description">Eight published adópengő index observations from January 1 to July 31, 1946. The vertical axis is logarithmic. The index rises from 1 to 2 times 10 to the 21st. A separate note reports the Cato Institute's peak monthly price-inflation estimate.</desc>
+<rect width="100%" height="100%" fill="#281923"/>
+<text x="76" y="55" fill="#fff2ea" font-family="Arial, sans-serif" font-size="29" font-weight="700">Hungary’s 1946 hyperinflation</text>
+<text x="78" y="87" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="15">The adópengő index · eight published dates · logarithmic scale</text>
+<rect x="78" y="112" width="1060" height="78" rx="4" fill="#3d2631"/>
+<text x="98" y="143" fill="#ffad83" font-family="Arial, sans-serif" font-size="14" font-weight="700">SEPARATE PRICE-INFLATION MEASURE · JULY 1946</text>
+<text x="98" y="169" fill="#fff2ea" font-family="Arial, sans-serif" font-size="17">Hanke–Krus report a peak monthly inflation rate of 4.19 × 10¹⁶% (prices doubling in about 15 hours).</text>
+<rect x="112" y="245" width="1028" height="360" fill="#38232f" stroke="#63404a" stroke-width="1"/>
+<line x1="112" y1="605.00" x2="1140" y2="605.00" stroke="#63404a" stroke-width="1"/>
+<text x="98" y="610.00" text-anchor="end" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="13">10^0</text>
+<line x1="112" y1="588.64" x2="1140" y2="588.64" stroke="#63404a" stroke-width="1"/>
+<text x="98" y="593.64" text-anchor="end" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="13">10^1</text>
+<line x1="112" y1="572.27" x2="1140" y2="572.27" stroke="#63404a" stroke-width="1"/>
+<text x="98" y="577.27" text-anchor="end" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="13">10^2</text>
+<line x1="112" y1="555.91" x2="1140" y2="555.91" stroke="#63404a" stroke-width="1"/>
+<text x="98" y="560.91" text-anchor="end" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="13">10^3</text>
+<line x1="112" y1="539.55" x2="1140" y2="539.55" stroke="#63404a" stroke-width="1"/>
+<text x="98" y="544.55" text-anchor="end" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="13">10^4</text>
+<line x1="112" y1="523.18" x2="1140" y2="523.18" stroke="#63404a" stroke-width="1"/>
+<text x="98" y="528.18" text-anchor="end" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="13">10^5</text>
+<line x1="112" y1="506.82" x2="1140" y2="506.82" stroke="#63404a" stroke-width="1"/>
+<text x="98" y="511.82" text-anchor="end" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="13">10^6</text>
+<line x1="112" y1="490.45" x2="1140" y2="490.45" stroke="#63404a" stroke-width="1"/>
+<text x="98" y="495.45" text-anchor="end" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="13">10^7</text>
+<line x1="112" y1="474.09" x2="1140" y2="474.09" stroke="#63404a" stroke-width="1"/>
+<text x="98" y="479.09" text-anchor="end" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="13">10^8</text>
+<line x1="112" y1="457.73" x2="1140" y2="457.73" stroke="#63404a" stroke-width="1"/>
+<text x="98" y="462.73" text-anchor="end" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="13">10^9</text>
+<line x1="112" y1="441.36" x2="1140" y2="441.36" stroke="#63404a" stroke-width="1"/>
+<text x="98" y="446.36" text-anchor="end" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="13">10^10</text>
+<line x1="112" y1="425.00" x2="1140" y2="425.00" stroke="#63404a" stroke-width="1"/>
+<text x="98" y="430.00" text-anchor="end" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="13">10^11</text>
+<line x1="112" y1="408.64" x2="1140" y2="408.64" stroke="#63404a" stroke-width="1"/>
+<text x="98" y="413.64" text-anchor="end" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="13">10^12</text>
+<line x1="112" y1="392.27" x2="1140" y2="392.27" stroke="#63404a" stroke-width="1"/>
+<text x="98" y="397.27" text-anchor="end" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="13">10^13</text>
+<line x1="112" y1="375.91" x2="1140" y2="375.91" stroke="#63404a" stroke-width="1"/>
+<text x="98" y="380.91" text-anchor="end" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="13">10^14</text>
+<line x1="112" y1="359.55" x2="1140" y2="359.55" stroke="#63404a" stroke-width="1"/>
+<text x="98" y="364.55" text-anchor="end" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="13">10^15</text>
+<line x1="112" y1="343.18" x2="1140" y2="343.18" stroke="#63404a" stroke-width="1"/>
+<text x="98" y="348.18" text-anchor="end" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="13">10^16</text>
+<line x1="112" y1="326.82" x2="1140" y2="326.82" stroke="#63404a" stroke-width="1"/>
+<text x="98" y="331.82" text-anchor="end" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="13">10^17</text>
+<line x1="112" y1="310.45" x2="1140" y2="310.45" stroke="#63404a" stroke-width="1"/>
+<text x="98" y="315.45" text-anchor="end" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="13">10^18</text>
+<line x1="112" y1="294.09" x2="1140" y2="294.09" stroke="#63404a" stroke-width="1"/>
+<text x="98" y="299.09" text-anchor="end" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="13">10^19</text>
+<line x1="112" y1="277.73" x2="1140" y2="277.73" stroke="#63404a" stroke-width="1"/>
+<text x="98" y="282.73" text-anchor="end" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="13">10^20</text>
+<line x1="112" y1="261.36" x2="1140" y2="261.36" stroke="#63404a" stroke-width="1"/>
+<text x="98" y="266.36" text-anchor="end" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="13">10^21</text>
+<line x1="112" y1="245.00" x2="1140" y2="245.00" stroke="#63404a" stroke-width="1"/>
+<text x="98" y="250.00" text-anchor="end" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="13">10^22</text>
+<line x1="112.00" y1="245" x2="112.00" y2="605" stroke="#523541" stroke-width="1"/>
+<text x="112.00" y="629" text-anchor="middle" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="13">Jan</text>
+<line x1="263.03" y1="245" x2="263.03" y2="605" stroke="#523541" stroke-width="1"/>
+<text x="263.03" y="629" text-anchor="middle" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="13">Feb</text>
+<line x1="399.45" y1="245" x2="399.45" y2="605" stroke="#523541" stroke-width="1"/>
+<text x="399.45" y="629" text-anchor="middle" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="13">Mar</text>
+<line x1="550.48" y1="245" x2="550.48" y2="605" stroke="#523541" stroke-width="1"/>
+<text x="550.48" y="629" text-anchor="middle" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="13">Apr</text>
+<line x1="696.64" y1="245" x2="696.64" y2="605" stroke="#523541" stroke-width="1"/>
+<text x="696.64" y="629" text-anchor="middle" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="13">May</text>
+<line x1="847.68" y1="245" x2="847.68" y2="605" stroke="#523541" stroke-width="1"/>
+<text x="847.68" y="629" text-anchor="middle" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="13">Jun</text>
+<line x1="993.84" y1="245" x2="993.84" y2="605" stroke="#523541" stroke-width="1"/>
+<text x="993.84" y="629" text-anchor="middle" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="13">Jul</text>
+<circle cx="112.00" cy="605.00" r="5.5" fill="#ff986b" stroke="#fff2ea" stroke-width="1.5"/>
+<circle cx="263.03" cy="601.23" r="5.5" fill="#ff986b" stroke="#fff2ea" stroke-width="1.5"/>
+<circle cx="399.45" cy="588.64" r="5.5" fill="#ff986b" stroke="#fff2ea" stroke-width="1.5"/>
+<circle cx="550.48" cy="578.11" r="5.5" fill="#ff986b" stroke="#fff2ea" stroke-width="1.5"/>
+<circle cx="696.64" cy="559.19" r="5.5" fill="#ff986b" stroke="#fff2ea" stroke-width="1.5"/>
+<circle cx="847.68" cy="519.84" r="5.5" fill="#ff986b" stroke="#fff2ea" stroke-width="1.5"/>
+<circle cx="993.84" cy="443.41" r="5.5" fill="#ff986b" stroke="#fff2ea" stroke-width="1.5"/>
+<circle cx="1140.00" cy="256.44" r="5.5" fill="#ff986b" stroke="#fff2ea" stroke-width="1.5"/>
+<line x1="1130.00" y1="265.44" x2="980.00" y2="294.44" stroke="#ffad83" stroke-width="1.5"/>
+<text x="974.00" y="313.44" text-anchor="end" fill="#fff2ea" font-family="Arial, sans-serif" font-size="14" font-weight="700">31 Jul · 2 × 10²¹</text>
+<text x="78" y="684" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="13">Adópengő index (pengős per adópengő), as reported in the cited table. Dots are source observations; no daily values are interpolated.</text>
+<text x="78" y="714" fill="#e4cbd0" font-family="Arial, sans-serif" font-size="12">Sources: Hungarian adópengő table; Hanke–Krus, World Hyperinflations. The two measures are not the same series.</text>
+</svg>
