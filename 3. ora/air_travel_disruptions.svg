@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title description" viewBox="0 0 1280 780">
+<title id="title">Two shocks, two recoveries: U.S. airline travel</title>
+<desc id="description">Monthly seasonally adjusted U.S. scheduled passenger-flight revenue passenger-miles from 2000 through July 2026. A 29.5 percent decline between August and September 2001 and a 96.7 percent decline between February and April 2020 are highlighted.</desc>
+<rect width="100%" height="100%" fill="#f5f8fb"/>
+<text x="70" y="58" fill="#152b3c" font-family="Arial, sans-serif" font-size="34" font-weight="700">Two shocks, two recoveries</text>
+<text x="72" y="91" fill="#526778" font-family="Arial, sans-serif" font-size="17">U.S. airline passenger travel fell after 9/11 — then collapsed further during COVID-19</text>
+<rect x="72" y="116" width="500" height="116" rx="12" fill="#ffffff" stroke="#e0e8ee"/>
+<rect x="72" y="116" width="5" height="116" rx="2" fill="#7357a6"/>
+<text x="94" y="144" fill="#7357a6" font-family="Arial, sans-serif" font-size="13" font-weight="700">AFTER 9/11  ·  AUG–SEP 2001</text>
+<text x="94" y="194" fill="#152b3c" font-family="Arial, sans-serif" font-size="38" font-weight="700">-29.5%</text>
+<text x="217" y="188" fill="#526778" font-family="Arial, sans-serif" font-size="14">month-over-month change in seasonally adjusted RPMs</text>
+<rect x="592" y="116" width="616" height="116" rx="12" fill="#ffffff" stroke="#e0e8ee"/>
+<rect x="592" y="116" width="5" height="116" rx="2" fill="#cf573e"/>
+<text x="614" y="144" fill="#cf573e" font-family="Arial, sans-serif" font-size="13" font-weight="700">COVID-19  ·  FEB–APR 2020</text>
+<text x="614" y="194" fill="#152b3c" font-family="Arial, sans-serif" font-size="38" font-weight="700">-96.7%</text>
+<text x="737" y="188" fill="#526778" font-family="Arial, sans-serif" font-size="14">month-over-month change in seasonally adjusted RPMs</text>
+<rect x="92" y="272" width="1138" height="390" fill="#ffffff" stroke="#dfe7ed"/>
+<line x1="92" y1="662.00" x2="1230" y2="662.00" stroke="#e5ebf0" stroke-width="1"/>
+<text x="78" y="667.00" text-anchor="end" fill="#607483" font-family="Arial, sans-serif" font-size="13">0</text>
+<line x1="92" y1="584.00" x2="1230" y2="584.00" stroke="#e5ebf0" stroke-width="1"/>
+<text x="78" y="589.00" text-anchor="end" fill="#607483" font-family="Arial, sans-serif" font-size="13">20</text>
+<line x1="92" y1="506.00" x2="1230" y2="506.00" stroke="#e5ebf0" stroke-width="1"/>
+<text x="78" y="511.00" text-anchor="end" fill="#607483" font-family="Arial, sans-serif" font-size="13">40</text>
+<line x1="92" y1="428.00" x2="1230" y2="428.00" stroke="#e5ebf0" stroke-width="1"/>
+<text x="78" y="433.00" text-anchor="end" fill="#607483" font-family="Arial, sans-serif" font-size="13">60</text>
+<line x1="92" y1="350.00" x2="1230" y2="350.00" stroke="#e5ebf0" stroke-width="1"/>
+<text x="78" y="355.00" text-anchor="end" fill="#607483" font-family="Arial, sans-serif" font-size="13">80</text>
+<line x1="92" y1="272.00" x2="1230" y2="272.00" stroke="#e5ebf0" stroke-width="1"/>
+<text x="78" y="277.00" text-anchor="end" fill="#607483" font-family="Arial, sans-serif" font-size="13">100</text>
+<line x1="92.00" y1="272" x2="92.00" y2="662" stroke="#eff3f6"/>
+<text x="92.00" y="688" text-anchor="middle" fill="#607483" font-family="Arial, sans-serif" font-size="13">2000</text>
+<line x1="306.72" y1="272" x2="306.72" y2="662" stroke="#eff3f6"/>
+<text x="306.72" y="688" text-anchor="middle" fill="#607483" font-family="Arial, sans-serif" font-size="13">2005</text>
+<line x1="521.43" y1="272" x2="521.43" y2="662" stroke="#eff3f6"/>
+<text x="521.43" y="688" text-anchor="middle" fill="#607483" font-family="Arial, sans-serif" font-size="13">2010</text>
+<line x1="736.15" y1="272" x2="736.15" y2="662" stroke="#eff3f6"/>
+<text x="736.15" y="688" text-anchor="middle" fill="#607483" font-family="Arial, sans-serif" font-size="13">2015</text>
+<line x1="950.87" y1="272" x2="950.87" y2="662" stroke="#eff3f6"/>
+<text x="950.87" y="688" text-anchor="middle" fill="#607483" font-family="Arial, sans-serif" font-size="13">2020</text>
+<line x1="1165.58" y1="272" x2="1165.58" y2="662" stroke="#eff3f6"/>
+<text x="1165.58" y="688" text-anchor="middle" fill="#607483" font-family="Arial, sans-serif" font-size="13">2025</text>
+<line x1="163.57" y1="272" x2="163.57" y2="662" stroke="#7357a6" stroke-width="1.5" stroke-dasharray="5 5" opacity="0.78"/>
+<line x1="961.60" y1="272" x2="961.60" y2="662" stroke="#cf573e" stroke-width="1.5" stroke-dasharray="5 5" opacity="0.78"/>
+<path d="M 92.00 452.42 L 95.58 444.93 L 99.16 440.46 L 102.74 436.27 L 106.31 432.26 L 109.89 434.76 L 113.47 434.84 L 117.05 438.93 L 120.63 427.11 L 124.21 430.15 L 127.79 431.73 L 131.36 444.52 L 134.94 436.41 L 138.52 435.73 L 142.10 435.40 L 145.68 433.15 L 149.26 435.16 L 152.84 435.15 L 156.42 433.60 L 159.99 431.73 L 163.57 499.57 L 167.15 487.36 L 170.73 477.80 L 174.31 470.94 L 177.89 464.74 L 181.47 458.40 L 185.04 455.39 L 188.62 456.01 L 192.20 453.50 L 195.78 451.37 L 199.36 451.19 L 202.94 448.83 L 206.52 454.67 L 210.09 449.22 L 213.67 449.36 L 217.25 447.34 L 220.83 448.31 L 224.41 451.31 L 227.99 455.50 L 231.57 465.37 L 235.14 459.37 L 238.72 452.16 L 242.30 444.07 L 245.88 444.03 L 249.46 444.15 L 253.04 441.41 L 256.62 436.66 L 260.19 435.01 L 263.77 437.42 L 267.35 432.70 L 270.93 429.42 L 274.51 426.16 L 278.09 426.60 L 281.67 422.39 L 285.25 421.31 L 288.82 422.65 L 292.40 421.79 L 295.98 416.24 L 299.56 416.98 L 303.14 415.49 L 306.72 411.95 L 310.30 410.14 L 313.87 408.47 L 317.45 409.15 L 321.03 406.90 L 324.61 407.97 L 328.19 407.07 L 331.77 410.19 L 335.35 405.91 L 338.92 410.91 L 342.50 407.53 L 346.08 406.83 L 349.66 404.80 L 353.24 403.63 L 356.82 402.41 L 360.40 399.53 L 363.97 401.95 L 367.55 404.36 L 371.13 403.28 L 374.71 408.50 L 378.29 404.17 L 381.87 402.12 L 385.45 398.07 L 389.03 398.65 L 392.60 394.89 L 396.18 396.00 L 399.76 393.67 L 403.34 393.13 L 406.92 394.05 L 410.50 393.49 L 414.08 394.05 L 417.65 391.86 L 421.23 389.82 L 424.81 388.51 L 428.39 387.75 L 431.97 389.65 L 435.55 388.49 L 439.13 388.78 L 442.70 388.01 L 446.28 391.57 L 449.86 392.05 L 453.44 395.21 L 457.02 398.47 L 460.60 398.67 L 464.18 410.39 L 467.75 408.79 L 471.33 412.72 L 474.91 410.84 L 478.49 414.72 L 482.07 413.02 L 485.65 415.45 L 489.23 409.54 L 492.81 418.00 L 496.38 411.98 L 499.96 408.85 L 503.54 406.33 L 507.12 411.20 L 510.70 411.56 L 514.28 415.08 L 517.86 408.38 L 521.43 408.92 L 525.01 412.92 L 528.59 405.96 L 532.17 411.75 L 535.75 405.16 L 539.33 402.20 L 542.91 402.05 L 546.48 400.09 L 550.06 396.40 L 553.64 392.86 L 557.22 395.89 L 560.80 399.31 L 564.38 397.55 L 567.96 402.05 L 571.53 399.79 L 575.11 399.51 L 578.69 395.88 L 582.27 397.40 L 585.85 395.06 L 589.43 397.62 L 593.01 394.84 L 596.58 394.37 L 600.16 396.09 L 603.74 396.58 L 607.32 396.82 L 610.90 396.36 L 614.48 393.69 L 618.06 394.27 L 621.64 395.22 L 625.21 395.07 L 628.79 395.94 L 632.37 394.38 L 635.95 394.35 L 639.53 395.96 L 643.11 394.21 L 646.69 393.38 L 650.26 391.08 L 653.84 386.25 L 657.42 391.46 L 661.00 390.74 L 664.58 390.30 L 668.16 387.86 L 671.74 389.49 L 675.31 388.17 L 678.89 389.04 L 682.47 388.63 L 686.05 384.46 L 689.63 387.10 L 693.21 385.61 L 696.79 384.20 L 700.36 380.02 L 703.94 382.88 L 707.52 381.74 L 711.10 382.57 L 714.68 382.22 L 718.26 381.56 L 721.84 380.45 L 725.42 381.66 L 728.99 379.22 L 732.57 376.57 L 736.15 376.59 L 739.73 375.18 L 743.31 372.39 L 746.89 374.05 L 750.47 371.78 L 754.04 370.88 L 757.62 368.46 L 761.20 364.75 L 764.78 363.08 L 768.36 362.40 L 771.94 364.65 L 775.52 360.72 L 779.09 362.25 L 782.67 362.39 L 786.25 365.89 L 789.83 361.90 L 793.41 360.43 L 796.99 358.37 L 800.57 360.29 L 804.14 360.96 L 807.72 352.58 L 811.30 356.01 L 814.88 356.31 L 818.46 353.21 L 822.04 350.80 L 825.62 354.05 L 829.19 354.38 L 832.77 348.35 L 836.35 349.74 L 839.93 349.98 L 843.51 346.45 L 847.09 346.33 L 850.67 352.98 L 854.25 344.01 L 857.82 342.80 L 861.40 342.91 L 864.98 340.46 L 868.56 335.12 L 872.14 337.87 L 875.72 333.93 L 879.30 335.03 L 882.87 332.73 L 886.45 332.01 L 890.03 331.85 L 893.61 332.31 L 897.19 327.87 L 900.77 329.88 L 904.35 327.72 L 907.92 324.25 L 911.50 322.93 L 915.08 318.99 L 918.66 321.81 L 922.24 321.17 L 925.82 319.84 L 929.40 321.54 L 932.97 318.61 L 936.55 314.95 L 940.13 315.98 L 943.71 311.77 L 947.29 313.21 L 950.87 306.35 L 954.45 319.56 L 958.03 499.01 L 961.60 650.63 L 965.18 630.35 L 968.76 608.87 L 972.34 587.58 L 975.92 575.69 L 979.50 565.37 L 983.08 553.18 L 986.65 546.48 L 990.23 538.42 L 993.81 538.90 L 997.39 537.47 L 1000.97 500.56 L 1004.55 477.24 L 1008.13 447.84 L 1011.70 419.17 L 1015.28 398.86 L 1018.86 403.80 L 1022.44 410.63 L 1026.02 401.26 L 1029.60 380.33 L 1033.18 375.82 L 1036.75 409.42 L 1040.33 386.00 L 1043.91 366.24 L 1047.49 354.17 L 1051.07 354.30 L 1054.65 354.40 L 1058.23 354.24 L 1061.81 346.01 L 1065.38 333.33 L 1068.96 331.38 L 1072.54 332.69 L 1076.12 333.65 L 1079.70 320.10 L 1083.28 319.64 L 1086.86 322.27 L 1090.43 316.50 L 1094.01 315.61 L 1097.59 318.40 L 1101.17 312.22 L 1104.75 310.60 L 1108.33 302.16 L 1111.91 298.79 L 1115.48 300.95 L 1119.06 301.62 L 1122.64 299.49 L 1126.22 298.59 L 1129.80 298.38 L 1133.38 296.60 L 1136.96 296.43 L 1140.53 292.01 L 1144.11 295.83 L 1147.69 296.26 L 1151.27 296.24 L 1154.85 297.64 L 1158.43 289.27 L 1162.01 291.13 L 1165.58 293.75 L 1169.16 296.55 L 1172.74 293.00 L 1176.32 294.80 L 1179.90 295.86 L 1183.48 293.20 L 1187.06 291.96 L 1190.64 291.03 L 1194.21 295.40 L 1197.79 290.42 L 1201.37 294.70 L 1204.95 285.16 L 1208.53 291.91 L 1212.11 285.41 L 1215.69 285.06 L 1219.26 292.81 L 1222.84 294.00 L 1226.42 294.82 L 1230.00 298.10" fill="none" stroke="#176b87" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="72" y="260" fill="#526778" font-family="Arial, sans-serif" font-size="13">Revenue passenger-miles (billions; seasonally adjusted)</text>
+<circle cx="163.57" cy="499.57" r="5.5" fill="#7357a6" stroke="#ffffff" stroke-width="2"/>
+<circle cx="961.60" cy="650.63" r="5.5" fill="#cf573e" stroke="#ffffff" stroke-width="2"/>
+<line x1="72" y1="718" x2="105" y2="718" stroke="#176b87" stroke-width="3"/>
+<text x="114" y="723" fill="#344c5d" font-family="Arial, sans-serif" font-size="13">Seasonally adjusted monthly RPMs</text>
+<line x1="366" y1="718" x2="389" y2="718" stroke="#7357a6" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="398" y="723" fill="#344c5d" font-family="Arial, sans-serif" font-size="13">September 2001</text>
+<line x1="548" y1="718" x2="571" y2="718" stroke="#cf573e" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="580" y="723" fill="#344c5d" font-family="Arial, sans-serif" font-size="13">April 2020</text>
+<text x="72" y="758" fill="#607483" font-family="Arial, sans-serif" font-size="12">Source: U.S. BTS. BTS reports RPMs in thousands; values are shown here in billions.</text>
+</svg>
