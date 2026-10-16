@@ -1,4 +1,4 @@
-"""Chart Hungary's 1946 adópengő index on a logarithmic scale."""
+"""Chart Hungary's monthly inflation rate and billion-pengő banknote period."""
 
 import csv
 import math
@@ -7,62 +7,93 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent
-DATA_PATH = ROOT / "data" / "hungary_adopengo_index.csv"
+DATA_PATH = ROOT / "data" / "hungary_monthly_inflation_rates.csv"
 CHART_PATH = ROOT / "hungary_hyperinflation.svg"
 
 
 def load_observations(path=DATA_PATH):
     observations = []
+    expected_fields = [
+        "period_start",
+        "period_end",
+        "index_value_start",
+        "index_value_end",
+        "source",
+    ]
     with path.open(newline="", encoding="utf-8") as source:
         reader = csv.DictReader(source)
-        if reader.fieldnames != ["date", "index_value"]:
-            raise ValueError("Expected CSV columns: date,index_value.")
+        if reader.fieldnames != expected_fields:
+            raise ValueError(
+                f"Expected CSV columns: {','.join(expected_fields)}."
+            )
         for row_number, row in enumerate(reader, start=2):
             if None in row or any(value is None for value in row.values()):
                 raise ValueError(
                     f"CSV row {row_number} has an unexpected number of fields."
                 )
-            observation_date = date.fromisoformat(row["date"])
+            start = date.fromisoformat(row["period_start"])
+            end = date.fromisoformat(row["period_end"])
             try:
-                index_value = float(row["index_value"])
+                level_start = float(row["index_value_start"])
+                level_end = float(row["index_value_end"])
             except ValueError as exc:
                 raise ValueError(
-                    f"Invalid index value on {observation_date}."
+                    f"Invalid index value in CSV row {row_number}."
                 ) from exc
-            if not math.isfinite(index_value) or index_value <= 0:
+            if (
+                not math.isfinite(level_start)
+                or not math.isfinite(level_end)
+                or level_start <= 0
+                or level_end <= 0
+            ):
                 raise ValueError(
-                    f"Index value must be positive and finite on {observation_date}."
+                    f"Index values must be positive and finite in CSV row {row_number}."
+                )
+            if end <= start:
+                raise ValueError(
+                    f"Period end must follow its start in CSV row {row_number}."
                 )
             observations.append(
-                {"date": observation_date, "index_value": index_value}
+                {
+                    "period_start": start,
+                    "period_end": end,
+                    "index_value_start": level_start,
+                    "index_value_end": level_end,
+                    "inflation_percent": (level_end / level_start - 1) * 100,
+                    "source": row["source"],
+                }
             )
 
-    if len(observations) < 2:
-        raise ValueError("At least two adópengő index observations are required.")
-    if observations != sorted(observations, key=lambda row: row["date"]):
-        raise ValueError("Adópengő index observations must be in date order.")
-    if len({row["date"] for row in observations}) != len(observations):
-        raise ValueError("Adópengő index observation dates must be unique.")
+    if not observations:
+        raise ValueError("The monthly inflation dataset is empty.")
+    if observations != sorted(observations, key=lambda row: row["period_start"]):
+        raise ValueError("Inflation periods must be in date order.")
+    for previous, current in zip(observations, observations[1:]):
+        if current["period_start"] != previous["period_end"]:
+            raise ValueError("Inflation periods must be contiguous and non-overlapping.")
     return observations
 
 
 def render_svg(observations):
-    if len(observations) < 2:
-        raise ValueError("At least two observations are required to draw the chart.")
+    if not observations:
+        raise ValueError("At least one inflation observation is required.")
     if any(
-        row["index_value"] <= 0 or not math.isfinite(row["index_value"])
+        row["inflation_percent"] <= 0
+        or not math.isfinite(row["inflation_percent"])
         for row in observations
     ):
         raise ValueError("Logarithmic chart values must be positive and finite.")
 
-    width, height = 1280, 790
-    left, right, top, bottom = 112, 1200, 255, 630
-    first_date = observations[0]["date"]
-    last_date = observations[-1]["date"]
-    first_day = first_date.toordinal()
-    last_day = last_date.toordinal()
-    max_exponent = math.ceil(
-        math.log10(max(row["index_value"] for row in observations))
+    width, height = 1280, 800
+    left, right, top, bottom = 112, 1205, 285, 620
+    first_date = date(1945, 8, 1)
+    last_date = date(1946, 8, 1)
+    first_day, last_day = first_date.toordinal(), last_date.toordinal()
+    minimum_exponent = math.floor(
+        math.log10(min(row["inflation_percent"] for row in observations))
+    )
+    maximum_exponent = math.ceil(
+        math.log10(max(row["inflation_percent"] for row in observations))
     )
 
     def x_position(observation_date):
@@ -72,13 +103,17 @@ def render_svg(observations):
             * (right - left)
         )
 
-    def y_position(index_value):
-        return bottom - math.log10(index_value) / max_exponent * (bottom - top)
+    def y_position(inflation_percent):
+        return bottom - (
+            (math.log10(inflation_percent) - minimum_exponent)
+            / (maximum_exponent - minimum_exponent)
+            * (bottom - top)
+        )
 
     points = [
         (
-            x_position(row["date"]),
-            y_position(row["index_value"]),
+            x_position(row["period_end"]),
+            y_position(row["inflation_percent"]),
             row,
         )
         for row in observations
@@ -88,113 +123,134 @@ def render_svg(observations):
         for index, (x, y, _) in enumerate(points)
     )
 
-    june = next(
-        row for row in observations
-        if row["date"] == date(1946, 6, 1)
-    )
-    july_first = next(
-        row for row in observations
-        if row["date"] == date(1946, 7, 1)
-    )
-    final = observations[-1]
-    june_x = x_position(june["date"])
-    june_y = y_position(june["index_value"])
-    july_x = x_position(july_first["date"])
-    july_y = y_position(july_first["index_value"])
-    final_x, final_y, _ = points[-1]
+    billion_note_date = date(1946, 5, 13)
+    billion_note_x = x_position(billion_note_date)
+    band_width = right - billion_note_x
+    first_data_x = x_position(date(1946, 1, 1))
+    peak_row = max(observations, key=lambda row: row["inflation_percent"])
+    peak_x = x_position(peak_row["period_end"])
+    peak_y = y_position(peak_row["inflation_percent"])
 
     elements = [
         f'<svg xmlns="http://www.w3.org/2000/svg" role="img" '
         f'aria-labelledby="title description" viewBox="0 0 {width} {height}">',
-        '<title id="title">Hungary’s 1946 hyperinflation and the adópengő index</title>',
+        '<title id="title">Hungary’s monthly inflation during the 1946 hyperinflation</title>',
         (
-            '<desc id="description">Eight published adópengő index observations '
-            "from January 1 to July 31, 1946, rising from 1 to 2 times 10 to "
-            "the 21st. The vertical axis is logarithmic. A separate note reports "
-            "the Cato Institute's peak monthly price-inflation estimate. The line "
-            "connects the eight reported observations and does not show daily values."
+            '<desc id="description">A logarithmic chart of the inflation rate '
+            "calculated between seven consecutive published price-index dates "
+            "from January through July 1946. It highlights the period from 13 "
+            "May 1946, when a one-billion-pengő banknote was first issued, through "
+            "the end of July. Monthly data before January 1946 is not included."
             "</desc>"
         ),
         '<rect width="100%" height="100%" fill="#172b4d"/>',
         '<text x="78" y="57" fill="#f1f4f8" font-family="Arial, sans-serif" '
-        'font-size="29" font-weight="700">Hungary’s 1946 hyperinflation</text>',
+        'font-size="29" font-weight="700">Hungary’s hyperinflation, month by month</text>',
         '<text x="80" y="88" fill="#c3cfdd" font-family="Arial, sans-serif" '
-        'font-size="15">Adópengő index · eight reported dates · logarithmic scale</text>',
-        '<rect x="78" y="112" width="1060" height="75" rx="4" fill="#20395f"/>',
+        'font-size="15">Monthly inflation implied by published index changes · logarithmic scale</text>',
+        '<rect x="78" y="111" width="1060" height="77" rx="4" fill="#20395f"/>',
         '<text x="98" y="141" fill="#ff8a75" font-family="Arial, sans-serif" '
-        'font-size="13" font-weight="700">SEPARATE MEASURE · JULY 1946 PEAK MONTHLY INFLATION</text>',
+        'font-size="13" font-weight="700">THE CATASTROPHIC PEAK · JULY 1946</text>',
         '<text x="98" y="168" fill="#f1f4f8" font-family="Arial, sans-serif" '
-        'font-size="17">4.19 × 10¹⁶% · prices doubled in about 15 hours (Hanke–Krus)</text>',
-        f'<text x="{june_x - 12:.2f}" y="216" text-anchor="end" '
-        'fill="#b39ddb" font-family="Arial, sans-serif" '
-        'font-size="13" font-weight="700">1 JUNE 1946</text>',
-        f'<text x="{june_x - 12:.2f}" y="238" text-anchor="end" '
-        'fill="#f1f4f8" font-family="Arial, sans-serif" '
-        f'font-size="15">{june["index_value"]:,.0f}</text>',
-        f'<line x1="{june_x:.2f}" y1="244" x2="{june_x:.2f}" y2="{top}" '
-        'stroke="#b39ddb" stroke-width="1.5"/>',
-        f'<text x="{right}" y="216" text-anchor="end" '
-        'fill="#ff8a75" font-family="Arial, sans-serif" '
-        'font-size="13" font-weight="700">31 JULY 1946</text>',
-        f'<text x="{right}" y="238" text-anchor="end" '
-        'fill="#f1f4f8" font-family="Arial, sans-serif" '
-        'font-size="15">2 × 10²¹</text>',
-        f'<line x1="{final_x:.2f}" y1="244" x2="{final_x:.2f}" y2="{top}" '
-        'stroke="#ff8a75" stroke-width="1.5"/>',
+        'font-size="16">Separate published estimate: 4.19 × 10¹⁶% monthly; prices doubled in about 15 hours.</text>',
+        '<text x="80" y="230" fill="#c3cfdd" font-family="Arial, sans-serif" '
+        'font-size="13">Hyperinflation: August 1945–July 1946 · monthly source observations begin in January 1946.</text>',
+        f'<rect x="{left}" y="{top}" width="{first_data_x - left:.2f}" '
+        f'height="{bottom - top}" fill="#526177" opacity="0.22"/>',
+        f'<rect x="{billion_note_x:.2f}" y="{top}" width="{band_width:.2f}" '
+        f'height="{bottom - top}" fill="#6b343e" opacity="0.42"/>',
         f'<rect x="{left}" y="{top}" width="{right - left}" '
-        f'height="{bottom - top}" fill="#20395f" stroke="#395174" stroke-width="1"/>',
+        f'height="{bottom - top}" fill="none" stroke="#395174" stroke-width="1"/>',
+        f'<line x1="{billion_note_x:.2f}" y1="{top}" '
+        f'x2="{billion_note_x:.2f}" y2="{bottom}" stroke="#ff8a75" '
+        'stroke-width="1.8" stroke-dasharray="6 5"/>',
+        f'<text x="{billion_note_x + 10:.2f}" y="{top + 23}" '
+        'fill="#ffd1c6" font-family="Arial, sans-serif" font-size="12" '
+        'font-weight="700">BILLION-PENGŐ NOTES</text>',
+        f'<text x="{billion_note_x + 10:.2f}" y="{top + 42}" '
+        'fill="#f1f4f8" font-family="Arial, sans-serif" font-size="12">from 13 May</text>',
+        f'<text x="{(left + first_data_x) / 2:.2f}" y="{(top + bottom) / 2:.2f}" '
+        'text-anchor="middle" fill="#c3cfdd" font-family="Arial, sans-serif" '
+        'font-size="13">No monthly observations</text>',
+        f'<text x="{(left + first_data_x) / 2:.2f}" y="{(top + bottom) / 2 + 20:.2f}" '
+        'text-anchor="middle" fill="#c3cfdd" font-family="Arial, sans-serif" '
+        'font-size="13">in the cited series</text>',
+        f'<text x="{left}" y="266" fill="#f1f4f8" font-family="Arial, sans-serif" '
+        'font-size="14" font-weight="700">Inflation between published observations (%)</text>',
     ]
 
-    for exponent in range(0, max_exponent + 1, 3):
+    for exponent in range(minimum_exponent, maximum_exponent + 1, 2):
         y = y_position(10**exponent)
         elements.extend(
             [
                 f'<line x1="{left}" y1="{y:.2f}" x2="{right}" y2="{y:.2f}" '
                 'stroke="#395174" stroke-width="1"/>',
                 f'<text x="{left - 14}" y="{y + 5:.2f}" text-anchor="end" '
-                'fill="#c3cfdd" font-family="Arial, sans-serif" font-size="13">'
-                f"10^{exponent}</text>",
+                'fill="#c3cfdd" font-family="Arial, sans-serif" font-size="12">'
+                f"10^{exponent}%</text>",
             ]
         )
 
-    for month, label in enumerate(
-        ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"), start=1
-    ):
-        month_date = date(1946, month, 1)
+    tick_dates = [
+        date(1945, month, 1) for month in range(8, 13)
+    ] + [date(1946, month, 1) for month in range(1, 8)]
+    for month_date in tick_dates:
         x = x_position(month_date)
+        month_label = month_date.strftime("%b")
         elements.extend(
             [
                 f'<line x1="{x:.2f}" y1="{top}" x2="{x:.2f}" y2="{bottom}" '
                 'stroke="#314a6c" stroke-width="1"/>',
                 f'<text x="{x:.2f}" y="{bottom + 27}" text-anchor="middle" '
                 'fill="#c3cfdd" font-family="Arial, sans-serif" font-size="13">'
-                f"{label}</text>",
+                f"{month_label}</text>",
             ]
         )
+        if month_date.month in (8, 1):
+            elements.append(
+                f'<text x="{x:.2f}" y="{bottom + 45}" text-anchor="middle" '
+                'fill="#91a4bc" font-family="Arial, sans-serif" font-size="11">'
+                f"{month_date.year}</text>"
+            )
 
-    elements.extend(
-        [
-            f'<path d="{line_path}" fill="none" stroke="#ff8a75" '
-            'stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>',
-        ]
+    elements.append(
+        f'<path d="{line_path}" fill="none" stroke="#ff8a75" stroke-width="3" '
+        'stroke-linejoin="round" stroke-linecap="round"/>'
     )
-    for x, y, _ in points:
+    label_offsets = (-12, 20, -12, 20, -12, 20)
+    label_values = (
+        "70%",
+        "488%",
+        "340%",
+        "1,332%",
+        "25,297%",
+        "4.69 million%",
+    )
+    for index, (x, y, _) in enumerate(points):
         elements.append(
-            f'<circle cx="{x:.2f}" cy="{y:.2f}" r="5.5" '
-            'fill="#ff8a75" stroke="#f1f4f8" stroke-width="1.5"/>'
+            f'<circle cx="{x:.2f}" cy="{y:.2f}" r="6" fill="#ff8a75" '
+            'stroke="#f1f4f8" stroke-width="1.5"/>'
         )
+        if index < len(label_values):
+            elements.append(
+                f'<text x="{x + 10:.2f}" y="{y + label_offsets[index]:.2f}" '
+                'fill="#f1f4f8" font-family="Arial, sans-serif" font-size="12" '
+                f'font-weight="700">{label_values[index]}</text>'
+            )
 
     elements.extend(
         [
-            f'<text x="{july_x - 12:.2f}" y="{july_y - 18:.2f}" '
+            f'<text x="{peak_x - 10:.2f}" y="{peak_y + 23:.2f}" '
             'text-anchor="end" fill="#f1f4f8" font-family="Arial, sans-serif" '
-            'font-size="13" font-weight="700">1 Jul · 7.5 billion</text>',
-            '<text x="78" y="704" fill="#c3cfdd" font-family="Arial, sans-serif" '
-            'font-size="13">Adópengő index (pengős per adópengő), as reported in the source table.</text>',
-            '<text x="78" y="729" fill="#c3cfdd" font-family="Arial, sans-serif" '
-            'font-size="12">Dots are the eight published observations. The connecting line is a visual guide, not daily data.</text>',
-            '<text x="78" y="754" fill="#c3cfdd" font-family="Arial, sans-serif" '
-            'font-size="12">Sources: Garami, Pénzportál (via the Hungarian adópengő table); Hanke–Krus, World Hyperinflations.</text>',
+            'font-size="13" font-weight="700">26.7 trillion% in 30 days</text>',
+            f'<line x1="{billion_note_x:.2f}" y1="{top - 20}" '
+            f'x2="{billion_note_x:.2f}" y2="{top}" stroke="#ff8a75" stroke-width="1.5"/>',
+            '<text x="78" y="690" fill="#c3cfdd" font-family="Arial, sans-serif" '
+            'font-size="12">Rates are calculated from the published price-level values between the dates shown; the July interval is 1–31 July.</text>',
+            '<text x="78" y="714" fill="#c3cfdd" font-family="Arial, sans-serif" '
+            'font-size="12">The source is a historical pengő valuation index; here it is converted to simple monthly percentage changes.</text>',
+            '<text x="78" y="738" fill="#c3cfdd" font-family="Arial, sans-serif" '
+            'font-size="12">Separate peak estimate: Hanke–Krus; billion-pengő note issue date: historical banknote table. See homework for sources and limits.</text>',
             "</svg>",
         ]
     )
@@ -204,7 +260,7 @@ def render_svg(observations):
 def main():
     observations = load_observations()
     CHART_PATH.write_text(render_svg(observations), encoding="utf-8")
-    print(f"Loaded {len(observations)} published index observations.")
+    print(f"Loaded {len(observations)} month-long inflation observations.")
     print(f"Saved chart to {CHART_PATH}.")
 
 

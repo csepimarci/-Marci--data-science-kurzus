@@ -7,42 +7,44 @@ from hungary_inflation_visualization import load_observations, render_svg
 
 
 class HungaryInflationVisualizationTests(unittest.TestCase):
-    def test_loads_eight_source_dates_and_index_values(self):
+    def test_loads_monthly_rates_as_percentage_changes(self):
         observations = load_observations()
-        self.assertEqual(len(observations), 8)
-        self.assertEqual(observations[0]["date"], date(1946, 1, 1))
-        self.assertEqual(observations[0]["index_value"], 1)
-        self.assertEqual(observations[-1]["date"], date(1946, 7, 31))
-        self.assertEqual(observations[-1]["index_value"], 2e21)
+        self.assertEqual(len(observations), 7)
+        self.assertEqual(observations[0]["period_start"], date(1946, 1, 1))
+        self.assertEqual(observations[0]["period_end"], date(1946, 2, 1))
+        self.assertAlmostEqual(observations[0]["inflation_percent"], 70)
+        self.assertEqual(observations[-1]["period_end"], date(1946, 7, 31))
+        self.assertAlmostEqual(
+            observations[-1]["inflation_percent"] / 1e12,
+            26.666666666566,
+            places=9,
+        )
 
-    def test_rejects_unsorted_and_duplicate_dates(self):
+    def test_rejects_noncontiguous_periods(self):
         with tempfile.TemporaryDirectory() as directory:
-            path = Path(directory) / "index.csv"
+            path = Path(directory) / "inflation.csv"
             path.write_text(
-                "date,index_value\n1946-02-01,2\n1946-01-01,1\n",
+                "period_start,period_end,index_value_start,index_value_end,source\n"
+                "1946-01-01,1946-02-01,1,1.7,test\n"
+                "1946-03-01,1946-04-01,10,44,test\n",
                 encoding="utf-8",
             )
-            with self.assertRaisesRegex(ValueError, "date order"):
-                load_observations(path)
-            path.write_text(
-                "date,index_value\n1946-01-01,1\n1946-01-01,2\n",
-                encoding="utf-8",
-            )
-            with self.assertRaisesRegex(ValueError, "unique"):
+            with self.assertRaisesRegex(ValueError, "contiguous"):
                 load_observations(path)
 
-    def test_chart_has_one_logarithmic_index_story_and_marks_the_source_gap(self):
-        observations = load_observations()
-        svg = render_svg(observations)
-        self.assertIn("Hungary’s 1946 hyperinflation", svg)
-        self.assertIn("Adópengő index", svg)
-        self.assertIn("logarithmic scale", svg)
-        self.assertIn("4.19 × 10¹⁶%", svg)
-        self.assertIn("2 × 10²¹", svg)
-        self.assertIn("not daily data", svg)
-        self.assertEqual(svg.count("<circle "), 8)
+    def test_chart_shows_monthly_rates_and_billion_pengo_period(self):
+        svg = render_svg(load_observations())
+        self.assertIn("Hungary’s hyperinflation, month by month", svg)
+        self.assertIn("Monthly inflation implied by published index changes", svg)
+        self.assertIn("BILLION-PENGŐ NOTES", svg)
+        self.assertIn("from 13 May", svg)
+        self.assertIn("26.7 trillion% in 30 days", svg)
+        self.assertIn("historical pengő valuation index", svg)
+        self.assertIn("No monthly observations", svg)
+        self.assertIn("August 1945", svg)
+        self.assertNotIn("Adópengő index", svg)
+        self.assertEqual(svg.count("<circle "), 7)
         self.assertEqual(svg.count("<path "), 1)
-        self.assertEqual(svg.count('fill="#ff8a75" stroke="#f1f4f8"'), 8)
 
 
 if __name__ == "__main__":

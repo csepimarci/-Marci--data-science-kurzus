@@ -1,67 +1,77 @@
-# Hungary's 1946 hyperinflation: how fast did the index rise?
+# Hungary's hyperinflation, month by month
 
-![Hungary's 1946 adópengő index rising from 1 in January to 2 × 10²¹ in July on a logarithmic scale.](./hungary_hyperinflation.svg)
+![Monthly inflation rates implied by Hungary's published price index in 1946, with the period of billion-pengő banknotes highlighted.](./hungary_hyperinflation.svg)
 
 ## Executive summary
 
-Hungary experienced one of history's most extreme hyperinflations in 1945–46.
-This chart follows the **adópengő index** through eight published observations
-from 1 January to 31 July 1946. The reported index rose from 1 to
-2,000,000,000,000,000,000,000 (2 × 10²¹).
+Hungary's post-war hyperinflation peaked in 1946. This chart shows the
+percentage increase implied by seven consecutive published index
+observations from January through July 1946. Rates are calculated as
+`(ending level / starting level - 1) × 100`. The final observation, from
+1–31 July, is a rise of about **26.7 trillion percent**.
 
-The vertical axis is logarithmic: each equal step represents a tenfold
-increase. A linear axis would make the early values almost invisible. The
-line connects the eight source observations as a visual guide; it does not
-invent daily data between them. Hanke and Krus's separate estimate of the
-peak monthly inflation rate is highlighted above the chart, not plotted as
-part of the index series.
+The chart highlights the period from **13 May 1946**, when the first
+one-billion-pengő banknote was issued, to the end of July. Larger denominations
+followed rapidly. Hanke and Krus report a separate peak monthly inflation
+estimate of **4.19 × 10¹⁶%**, with prices doubling in about 15 hours. That
+expert peak statistic uses a different method/price series, so it is shown as
+context rather than mixed into the plotted observations.
 
-## Reading the chart
+## How to read the chart
 
-- The horizontal axis covers January–July 1946; every dot is a value reported
-  in the source table.
-- The vertical axis uses powers of ten. The index went from 1 to 2 × 10²¹,
-  so this extraordinary change can be seen without compressing the early
-  observations to the bottom of the chart.
-- The source labels the series “Adópengő index, 1946 (pengős per adópengő).”
-  It is an index/currency ratio, not a direct measurement of the price of
-  bread or a modern consumer-price index.
-- The callout reports Hanke and Krus's peak monthly price-inflation estimate
-  of 4.19 × 10¹⁶%, with prices doubling in about 15 hours. This is a separate
-  statistic and uses a different measure.
+- Each point is the percentage increase between the two dates shown by its
+  adjacent monthly interval. Most periods run from the first day of one month
+  to the first day of the next. The last interval is 1–31 July.
+- The vertical axis is logarithmic. Each step is a tenfold increase; this
+  keeps the earlier rates visible alongside the enormous July value.
+- The shaded period starts on the documented issue date of the first
+  one-billion-pengő banknote. It marks the banknote chronology, not a separate
+  inflation measure.
+- Hyperinflation began in August 1945, but this chart's monthly source
+  observations begin in January 1946. It does not invent monthly rates for
+  1945.
 
-## What about bread?
+## About the data
 
-The available historical retail-price table does not provide bread prices
-through the peak of hyperinflation. The companion
-[bread-price analysis](./homework_hungary_bread_prices.md) shows the actual
-documented bread-price observations before and after the crisis, and keeps
-them separate from this index. That distinction avoids presenting the
-general index as if it were a bread-price series.
+The historical source's dated series is called the **adópengő index**. The
+adópengő was a temporary accounting unit introduced in 1946; the index
+expressed pengő values per adópengő. Rather than make that unfamiliar index
+the chart, the CSV keeps its dated start and end values and the script
+converts consecutive values into percentage changes. This is a historical
+inflation proxy, not a modern official monthly CPI series. The number of
+available observations is limited, and the rates are changes implied by the
+published dates.
 
-## Data and reproducibility
+The banknote timeline is separate context. A one-billion-pengő note was
+issued on 13 May 1946; later high denominations included milpengő and
+b.-pengő notes. The chart shades the period beginning with the first
+one-billion-pengő issue rather than implying that every later note had the
+same unit.
 
-The CSV contains the eight dated observations transcribed from the
-Adópengő-index table cited below. Values are not interpolated in the CSV.
+## Reproducibility
 
 ```bash
 python "3. ora/hungary_inflation_visualization.py"
 python -m unittest discover -s "3. ora" -p "test_*.py" -v
 ```
 
-The chart is generated as an SVG using Python's standard library.
+The SVG and chart are generated using Python's standard library.
 
 ## References
 
 1. Garami, Erika. “Hyperinflation in numbers” (“A hiperinfláció
    számokban”). *Pénzportál*, 1 November 2006; archived 21 July 2011.
-   The cited table reports the adópengő index values.
+   Source for the dated index values used to calculate the monthly rates.
    <https://web.archive.org/web/20110721085706/http://www.penzportal.hu/index.cgi?r=&v=&l=&feaz=75a8wc4sitder9&mf=&p=12732>
-2. “Hungarian adópengő.” *Wikipedia*, table “Adópengő index, 1946
-   (pengős per adópengő),” citing Pénzportál.
+2. “Hungarian adópengő.” *Wikipedia*. Dated price-index table reproduced from
+   Pénzportál; used here as a source for the dated inputs, not as the chart's
+   subject.
    <https://en.wikipedia.org/wiki/Hungarian_ad%C3%B3peng%C5%91>
-3. Hanke, Steve H., and Nicholas Krus. *World Hyperinflations*. Cato
-   Institute. Source for the peak monthly inflation estimate and approximate
-   price-doubling time.
+3. “Paper money of the Hungarian pengő.” *Wikipedia*. 1945–46 banknote issue
+   table, including the one-billion-pengő note's 13 May 1946 issue date.
+   <https://en.wikipedia.org/wiki/Paper_money_of_the_Hungarian_peng%C5%91>
+4. Hanke, Steve H., and Nicholas Krus. *World Hyperinflations*. Cato
+   Institute. Source for the separately reported peak monthly inflation rate
+   and approximate price-doubling time.
    <https://www.cato.org/working-paper/world-hyperinflations>
    <https://object.cato.org/sites/cato.org/files/pubs/pdf/hanke-krus-hyperinflation-table-may-2013.pdf>
