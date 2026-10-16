@@ -122,12 +122,13 @@ def render_svg(bread_rows, price_level_rows):
     elements = [
         f'<svg xmlns="http://www.w3.org/2000/svg" role="img" '
         f'aria-labelledby="title description" viewBox="0 0 {width} {height}">',
-        '<title id="title">Bread prices and hyperinflation in Hungary, 1939–1952</title>',
+        '<title id="title">Bread prices and hyperinflation in Hungary, 1938–1952</title>',
         (
             '<desc id="description">A timeline of nine sourced bread-price observations '
             "per kilogram in pengő before the 1946 currency reform and forint after it. "
-            "A second panel shows four published general price-level multiples relative "
-            "to 1938 on a logarithmic scale. No bread prices are plotted for the peak "
+            "A second panel shows the 1938 reference base and four published general "
+            "price-level multiples relative to 1938 on a logarithmic scale. "
+            "No bread prices are plotted for the peak "
             "hyperinflation because the source series has no observations then."
             "</desc>"
         ),
@@ -256,10 +257,11 @@ def render_svg(bread_rows, price_level_rows):
         )
 
     label_specs = (
-        (0, "Jul 1945 · 105×"),
-        (1, "Dec 1945 · 41,478×"),
-        (2, "Apr 1946 · 35.8 million×"),
-        (3, "31 Jul 1946 · 399,623 quadrillion×"),
+        (0, "1938 base · 1×"),
+        (1, "Jul 1945 · 105×"),
+        (2, "Dec 1945 · 41,478×"),
+        (3, "Apr 1946 · 35.8 million×"),
+        (4, "31 Jul 1946 · 399,623 quadrillion×"),
     )
     for index, label in label_specs:
         row = price_level_rows[index]

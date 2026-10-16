@@ -3,47 +3,53 @@ import unittest
 from datetime import date
 from pathlib import Path
 
-from hungary_inflation_visualization import load_observations, render_svg
+from hungary_inflation_visualization import (
+    load_forint_cpi,
+    load_historical_price_level,
+    render_svg,
+)
 
 
 class HungaryInflationVisualizationTests(unittest.TestCase):
-    def test_loads_monthly_rates_as_percentage_changes(self):
-        observations = load_observations()
-        self.assertEqual(len(observations), 7)
-        self.assertEqual(observations[0]["period_start"], date(1946, 1, 1))
-        self.assertEqual(observations[0]["period_end"], date(1946, 2, 1))
-        self.assertAlmostEqual(observations[0]["inflation_percent"], 70)
-        self.assertEqual(observations[-1]["period_end"], date(1946, 7, 31))
-        self.assertAlmostEqual(
-            observations[-1]["inflation_percent"] / 1e12,
-            26.666666666566,
-            places=9,
-        )
+    def test_loads_historical_price_level_checkpoints(self):
+        observations = load_historical_price_level()
+        self.assertEqual(len(observations), 5)
+        self.assertEqual(observations[0]["date"], date(1938, 1, 1))
+        self.assertEqual(observations[0]["price_level_multiple"], 1)
+        self.assertEqual(observations[-1]["date"], date(1946, 7, 31))
+        self.assertEqual(observations[-1]["price_level_multiple"], 3.99623e20)
 
-    def test_rejects_noncontiguous_periods(self):
+    def test_loads_long_run_forint_era_cpi(self):
+        observations = load_forint_cpi()
+        self.assertEqual(len(observations), 54)
+        self.assertEqual(observations[0]["year"], 1972)
+        self.assertEqual(observations[-1]["year"], 2025)
+        self.assertAlmostEqual(observations[-1]["cpi_2010_100"], 191.983788982003)
+
+    def test_rejects_nonconsecutive_forint_cpi_years(self):
         with tempfile.TemporaryDirectory() as directory:
-            path = Path(directory) / "inflation.csv"
+            path = Path(directory) / "cpi.csv"
             path.write_text(
-                "period_start,period_end,index_value_start,index_value_end,source\n"
-                "1946-01-01,1946-02-01,1,1.7,test\n"
-                "1946-03-01,1946-04-01,10,44,test\n",
+                "year,cpi_2010_100,source\n"
+                "1972,2.2,test\n"
+                "1974,2.4,test\n",
                 encoding="utf-8",
             )
-            with self.assertRaisesRegex(ValueError, "contiguous"):
-                load_observations(path)
+            with self.assertRaisesRegex(ValueError, "consecutive"):
+                load_forint_cpi(path)
 
-    def test_chart_shows_monthly_rates_and_billion_pengo_period(self):
-        svg = render_svg(load_observations())
-        self.assertIn("Hungary’s hyperinflation, month by month", svg)
-        self.assertIn("Monthly inflation implied by published index changes", svg)
-        self.assertIn("BILLION-PENGŐ NOTES", svg)
-        self.assertIn("from 13 May", svg)
-        self.assertIn("26.7 trillion% in 30 days", svg)
-        self.assertIn("historical pengő valuation index", svg)
-        self.assertIn("No monthly observations", svg)
-        self.assertIn("August 1945", svg)
-        self.assertNotIn("Adópengő index", svg)
-        self.assertEqual(svg.count("<circle "), 7)
+    def test_chart_separates_historical_and_forint_era_bases(self):
+        svg = render_svg(load_historical_price_level(), load_forint_cpi())
+        self.assertIn("Hungary’s prices before and after the crisis", svg)
+        self.assertIn("Historical price level", svg)
+        self.assertIn("Forint-era consumer prices", svg)
+        self.assertIn("1946 forint reform", svg)
+        self.assertIn("different reference bases", svg)
+        self.assertIn("1972–2025", svg)
+        self.assertIn("399,623 quadrillion×", svg)
+        self.assertIn("doubled about every 15 hours", svg)
+        self.assertEqual(svg.count("<path "), 1)
+        self.assertEqual(svg.count('fill="#ff8a75" stroke="#f1f4f8"'), 5)
         self.assertEqual(svg.count("<path "), 1)
 
 

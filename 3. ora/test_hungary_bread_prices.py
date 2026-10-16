@@ -23,7 +23,9 @@ class HungaryBreadPriceTests(unittest.TestCase):
 
     def test_price_level_series_keeps_peak_scale(self):
         rows = load_price_level()
-        self.assertEqual(len(rows), 4)
+        self.assertEqual(len(rows), 5)
+        self.assertEqual(rows[0]["date"], date(1938, 1, 1))
+        self.assertEqual(rows[0]["price_level_multiple"], 1)
         self.assertEqual(rows[-1]["date"], date(1946, 7, 31))
         self.assertEqual(rows[-1]["price_level_multiple"], 3.99623e20)
 
@@ -32,7 +34,7 @@ class HungaryBreadPriceTests(unittest.TestCase):
         self.assertIn("Amounts across currencies are not directly comparable", svg)
         self.assertIn("NO BREAD-PRICE OBSERVATIONS IN THIS SOURCE", svg)
         self.assertIn("399,623 quadrillion×", svg)
-        self.assertEqual(svg.count('fill="#bf5c43"'), 4)
+        self.assertEqual(svg.count('fill="#bf5c43"'), 5)
 
     def test_chart_never_draws_a_fabricated_bread_price_line(self):
         svg = render_svg(load_bread_prices(), load_price_level())

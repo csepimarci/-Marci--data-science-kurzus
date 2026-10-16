@@ -1,8 +1,0 @@
-period_start,period_end,index_value_start,index_value_end,source
-1946-01-01,1946-02-01,1,1.7,"Penzportal published adópengő index"
-1946-02-01,1946-03-01,1.7,10,"Penzportal published adópengő index"
-1946-03-01,1946-04-01,10,44,"Penzportal published adópengő index"
-1946-04-01,1946-05-01,44,630,"Penzportal published adópengő index"
-1946-05-01,1946-06-01,630,160000,"Penzportal published adópengő index"
-1946-06-01,1946-07-01,160000,7500000000,"Penzportal published adópengő index"
-1946-07-01,1946-07-31,7500000000,2000000000000000000000,"Penzportal published adópengő index"

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title description" viewBox="0 0 1200 820">
-<title id="title">Bread prices and hyperinflation in Hungary, 1939–1952</title>
-<desc id="description">A timeline of nine sourced bread-price observations per kilogram in pengő before the 1946 currency reform and forint after it. A second panel shows four published general price-level multiples relative to 1938 on a logarithmic scale. No bread prices are plotted for the peak hyperinflation because the source series has no observations then.</desc>
+<title id="title">Bread prices and hyperinflation in Hungary, 1938–1952</title>
+<desc id="description">A timeline of nine sourced bread-price observations per kilogram in pengő before the 1946 currency reform and forint after it. A second panel shows the 1938 reference base and four published general price-level multiples relative to 1938 on a logarithmic scale. No bread prices are plotted for the peak hyperinflation because the source series has no observations then.</desc>
 <rect width="100%" height="100%" fill="#fbf8f1"/>
 <text x="72" y="55" fill="#273b32" font-family="Arial, sans-serif" font-size="30" font-weight="700">What did bread cost in Hungary?</text>
 <text x="74" y="85" fill="#5c685f" font-family="Arial, sans-serif" font-size="15">Observed retail prices before and after the 1945–46 hyperinflation</text>
@@ -90,10 +90,12 @@
 <text x="128" y="500.19" text-anchor="end" fill="#657067" font-family="Arial, sans-serif" font-size="12">10^20×</text>
 <line x1="140" y1="485.00" x2="1130" y2="485.00" stroke="#d9d2c6" stroke-width="1"/>
 <text x="128" y="489.00" text-anchor="end" fill="#657067" font-family="Arial, sans-serif" font-size="12">10^21×</text>
+<circle cx="140.00" cy="720.00" r="6.5" fill="#bf5c43" stroke="#fffdf7" stroke-width="2"/>
 <circle cx="634.73" cy="697.38" r="6.5" fill="#bf5c43" stroke="#fffdf7" stroke-width="2"/>
 <circle cx="662.37" cy="668.32" r="6.5" fill="#bf5c43" stroke="#fffdf7" stroke-width="2"/>
 <circle cx="684.24" cy="635.47" r="6.5" fill="#bf5c43" stroke="#fffdf7" stroke-width="2"/>
 <circle cx="706.10" cy="489.46" r="6.5" fill="#bf5c43" stroke="#fffdf7" stroke-width="2"/>
+<text x="149.00" y="707.00" text-anchor="start" fill="#843f31" font-family="Arial, sans-serif" font-size="12" font-weight="700">1938 base · 1×</text>
 <text x="643.73" y="684.38" text-anchor="start" fill="#843f31" font-family="Arial, sans-serif" font-size="12" font-weight="700">Jul 1945 · 105×</text>
 <text x="671.37" y="655.32" text-anchor="start" fill="#843f31" font-family="Arial, sans-serif" font-size="12" font-weight="700">Dec 1945 · 41,478×</text>
 <text x="693.24" y="622.47" text-anchor="start" fill="#843f31" font-family="Arial, sans-serif" font-size="12" font-weight="700">Apr 1946 · 35.8 million×</text>

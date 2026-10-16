@@ -88,8 +88,8 @@ The project contains two small, source-backed CSV files:
 
 - `data/hungary_bread_prices.csv`: nine observed bread prices, with date,
   amount per kilogram, currency, and source note.
-- `data/hungary_price_level_1938_base.csv`: four reported general price-level
-  multiples used to show the scale of hyperinflation.
+- `data/hungary_price_level_1938_base.csv`: the 1938 reference base and four
+  reported general price-level multiples used to show the scale of hyperinflation.
 
 The script reads both CSV files and generates the SVG using Python’s standard
 library:
