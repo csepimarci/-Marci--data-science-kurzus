@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title description" viewBox="0 0 1200 820">
+<title id="title">Bread prices and hyperinflation in Hungary, 1939–1952</title>
+<desc id="description">A timeline of nine sourced bread-price observations per kilogram in pengő before the 1946 currency reform and forint after it. A second panel shows four published general price-level multiples relative to 1938 on a logarithmic scale. No bread prices are plotted for the peak hyperinflation because the source series has no observations then.</desc>
+<rect width="100%" height="100%" fill="#fbf8f1"/>
+<text x="72" y="55" fill="#273b32" font-family="Arial, sans-serif" font-size="30" font-weight="700">What did bread cost in Hungary?</text>
+<text x="74" y="85" fill="#5c685f" font-family="Arial, sans-serif" font-size="15">Observed retail prices before and after the 1945–46 hyperinflation</text>
+<rect x="72" y="105" width="1058" height="55" rx="5" fill="#f0e6d4"/>
+<text x="91" y="128" fill="#7d4a2f" font-family="Arial, sans-serif" font-size="14" font-weight="700">HYPERINFLATION PEAK · JULY 1946</text>
+<text x="91" y="148" fill="#273b32" font-family="Arial, sans-serif" font-size="14">Monthly inflation reached 4.19 × 10¹⁶%; prices doubled about every 15 hours (Hanke–Krus).</text>
+<text x="74" y="202" fill="#273b32" font-family="Arial, sans-serif" font-size="19" font-weight="700">Bread price observations · per kilogram</text>
+<text x="74" y="224" fill="#5c685f" font-family="Arial, sans-serif" font-size="13">Timeline only: pengő before the currency change; forint after. Amounts across currencies are not directly comparable.</text>
+<rect x="640.33" y="245" width="65.95" height="180" fill="#f8e5dd"/>
+<text x="673.31" y="265" text-anchor="middle" fill="#a44d39" font-family="Arial, sans-serif" font-size="12" font-weight="700">HYPERINFLATION · NO BREAD-PRICE OBSERVATIONS IN THIS SOURCE</text>
+<line x1="140" y1="340" x2="1130" y2="340" stroke="#a8ada4" stroke-width="2"/>
+<line x1="140.00" y1="335" x2="140.00" y2="346" stroke="#818b82" stroke-width="1"/>
+<text x="140.00" y="364" text-anchor="middle" fill="#5c685f" font-family="Arial, sans-serif" font-size="12">1938</text>
+<line x1="271.90" y1="335" x2="271.90" y2="346" stroke="#818b82" stroke-width="1"/>
+<text x="271.90" y="364" text-anchor="middle" fill="#5c685f" font-family="Arial, sans-serif" font-size="12">1940</text>
+<line x1="403.99" y1="335" x2="403.99" y2="346" stroke="#818b82" stroke-width="1"/>
+<text x="403.99" y="364" text-anchor="middle" fill="#5c685f" font-family="Arial, sans-serif" font-size="12">1942</text>
+<line x1="535.89" y1="335" x2="535.89" y2="346" stroke="#818b82" stroke-width="1"/>
+<text x="535.89" y="364" text-anchor="middle" fill="#5c685f" font-family="Arial, sans-serif" font-size="12">1944</text>
+<line x1="667.98" y1="335" x2="667.98" y2="346" stroke="#818b82" stroke-width="1"/>
+<text x="667.98" y="364" text-anchor="middle" fill="#5c685f" font-family="Arial, sans-serif" font-size="12">1946</text>
+<line x1="799.88" y1="335" x2="799.88" y2="346" stroke="#818b82" stroke-width="1"/>
+<text x="799.88" y="364" text-anchor="middle" fill="#5c685f" font-family="Arial, sans-serif" font-size="12">1948</text>
+<line x1="931.96" y1="335" x2="931.96" y2="346" stroke="#818b82" stroke-width="1"/>
+<text x="931.96" y="364" text-anchor="middle" fill="#5c685f" font-family="Arial, sans-serif" font-size="12">1950</text>
+<line x1="1063.87" y1="335" x2="1063.87" y2="346" stroke="#818b82" stroke-width="1"/>
+<text x="1063.87" y="364" text-anchor="middle" fill="#5c685f" font-family="Arial, sans-serif" font-size="12">1952</text>
+<circle cx="249.68" cy="340" r="7" fill="#c77d35" stroke="#fffdf7" stroke-width="2"/>
+<text x="259.68" y="306" fill="#7d4a2f" font-family="Arial, sans-serif" font-size="14" font-weight="700">31 Aug 1939 · 0.38 pengő/kg</text>
+<circle cx="711.70" cy="340" r="5.5" fill="#4e8b57" stroke="#fffdf7" stroke-width="1.5"/>
+<circle cx="733.75" cy="340" r="5.5" fill="#4e8b57" stroke="#fffdf7" stroke-width="1.5"/>
+<circle cx="766.45" cy="340" r="5.5" fill="#4e8b57" stroke="#fffdf7" stroke-width="1.5"/>
+<circle cx="783.08" cy="340" r="5.5" fill="#4e8b57" stroke="#fffdf7" stroke-width="1.5"/>
+<circle cx="799.70" cy="340" r="5.5" fill="#4e8b57" stroke="#fffdf7" stroke-width="1.5"/>
+<circle cx="821.56" cy="340" r="5.5" fill="#4e8b57" stroke="#fffdf7" stroke-width="1.5"/>
+<circle cx="865.83" cy="340" r="5.5" fill="#4e8b57" stroke="#fffdf7" stroke-width="1.5"/>
+<circle cx="1129.82" cy="340" r="5.5" fill="#4e8b57" stroke="#fffdf7" stroke-width="1.5"/>
+<line x1="711.70" y1="330" x2="821.56" y2="330" stroke="#4e8b57" stroke-width="2"/>
+<text x="766.63" y="310" text-anchor="middle" fill="#356a3c" font-family="Arial, sans-serif" font-size="13" font-weight="700">0.92 Ft/kg on six dates · Aug 1946–Apr 1948</text>
+<text x="865.83" y="398" text-anchor="middle" fill="#356a3c" font-family="Arial, sans-serif" font-size="13" font-weight="700">31 Dec 1948 · 1.00 Ft/kg</text>
+<text x="1121.82" y="304" text-anchor="end" fill="#356a3c" font-family="Arial, sans-serif" font-size="13" font-weight="700">31 Dec 1952 · 2.80 Ft/kg</text>
+<text x="74" y="454" fill="#273b32" font-family="Arial, sans-serif" font-size="19" font-weight="700">Overall price level · 1938 = 1</text>
+<text x="74" y="475" fill="#5c685f" font-family="Arial, sans-serif" font-size="13">Published historical multiples, not a bread-price series · logarithmic scale</text>
+<rect x="140" y="485" width="990" height="235" fill="#f3efe6" stroke="#ded7ca" stroke-width="1"/>
+<rect x="640.33" y="485" width="65.95" height="235" fill="#f4ddd3" opacity="0.75"/>
+<line x1="140" y1="720.00" x2="1130" y2="720.00" stroke="#d9d2c6" stroke-width="1"/>
+<text x="128" y="724.00" text-anchor="end" fill="#657067" font-family="Arial, sans-serif" font-size="12">10^0×</text>
+<line x1="140" y1="708.81" x2="1130" y2="708.81" stroke="#d9d2c6" stroke-width="1"/>
+<text x="128" y="712.81" text-anchor="end" fill="#657067" font-family="Arial, sans-serif" font-size="12">10^1×</text>
+<line x1="140" y1="697.62" x2="1130" y2="697.62" stroke="#d9d2c6" stroke-width="1"/>
+<text x="128" y="701.62" text-anchor="end" fill="#657067" font-family="Arial, sans-serif" font-size="12">10^2×</text>
+<line x1="140" y1="686.43" x2="1130" y2="686.43" stroke="#d9d2c6" stroke-width="1"/>
+<text x="128" y="690.43" text-anchor="end" fill="#657067" font-family="Arial, sans-serif" font-size="12">10^3×</text>
+<line x1="140" y1="675.24" x2="1130" y2="675.24" stroke="#d9d2c6" stroke-width="1"/>
+<text x="128" y="679.24" text-anchor="end" fill="#657067" font-family="Arial, sans-serif" font-size="12">10^4×</text>
+<line x1="140" y1="664.05" x2="1130" y2="664.05" stroke="#d9d2c6" stroke-width="1"/>
+<text x="128" y="668.05" text-anchor="end" fill="#657067" font-family="Arial, sans-serif" font-size="12">10^5×</text>
+<line x1="140" y1="652.86" x2="1130" y2="652.86" stroke="#d9d2c6" stroke-width="1"/>
+<text x="128" y="656.86" text-anchor="end" fill="#657067" font-family="Arial, sans-serif" font-size="12">10^6×</text>
+<line x1="140" y1="641.67" x2="1130" y2="641.67" stroke="#d9d2c6" stroke-width="1"/>
+<text x="128" y="645.67" text-anchor="end" fill="#657067" font-family="Arial, sans-serif" font-size="12">10^7×</text>
+<line x1="140" y1="630.48" x2="1130" y2="630.48" stroke="#d9d2c6" stroke-width="1"/>
+<text x="128" y="634.48" text-anchor="end" fill="#657067" font-family="Arial, sans-serif" font-size="12">10^8×</text>
+<line x1="140" y1="619.29" x2="1130" y2="619.29" stroke="#d9d2c6" stroke-width="1"/>
+<text x="128" y="623.29" text-anchor="end" fill="#657067" font-family="Arial, sans-serif" font-size="12">10^9×</text>
+<line x1="140" y1="608.10" x2="1130" y2="608.10" stroke="#d9d2c6" stroke-width="1"/>
+<text x="128" y="612.10" text-anchor="end" fill="#657067" font-family="Arial, sans-serif" font-size="12">10^10×</text>
+<line x1="140" y1="596.90" x2="1130" y2="596.90" stroke="#d9d2c6" stroke-width="1"/>
+<text x="128" y="600.90" text-anchor="end" fill="#657067" font-family="Arial, sans-serif" font-size="12">10^11×</text>
+<line x1="140" y1="585.71" x2="1130" y2="585.71" stroke="#d9d2c6" stroke-width="1"/>
+<text x="128" y="589.71" text-anchor="end" fill="#657067" font-family="Arial, sans-serif" font-size="12">10^12×</text>
+<line x1="140" y1="574.52" x2="1130" y2="574.52" stroke="#d9d2c6" stroke-width="1"/>
+<text x="128" y="578.52" text-anchor="end" fill="#657067" font-family="Arial, sans-serif" font-size="12">10^13×</text>
+<line x1="140" y1="563.33" x2="1130" y2="563.33" stroke="#d9d2c6" stroke-width="1"/>
+<text x="128" y="567.33" text-anchor="end" fill="#657067" font-family="Arial, sans-serif" font-size="12">10^14×</text>
+<line x1="140" y1="552.14" x2="1130" y2="552.14" stroke="#d9d2c6" stroke-width="1"/>
+<text x="128" y="556.14" text-anchor="end" fill="#657067" font-family="Arial, sans-serif" font-size="12">10^15×</text>
+<line x1="140" y1="540.95" x2="1130" y2="540.95" stroke="#d9d2c6" stroke-width="1"/>
+<text x="128" y="544.95" text-anchor="end" fill="#657067" font-family="Arial, sans-serif" font-size="12">10^16×</text>
+<line x1="140" y1="529.76" x2="1130" y2="529.76" stroke="#d9d2c6" stroke-width="1"/>
+<text x="128" y="533.76" text-anchor="end" fill="#657067" font-family="Arial, sans-serif" font-size="12">10^17×</text>
+<line x1="140" y1="518.57" x2="1130" y2="518.57" stroke="#d9d2c6" stroke-width="1"/>
+<text x="128" y="522.57" text-anchor="end" fill="#657067" font-family="Arial, sans-serif" font-size="12">10^18×</text>
+<line x1="140" y1="507.38" x2="1130" y2="507.38" stroke="#d9d2c6" stroke-width="1"/>
+<text x="128" y="511.38" text-anchor="end" fill="#657067" font-family="Arial, sans-serif" font-size="12">10^19×</text>
+<line x1="140" y1="496.19" x2="1130" y2="496.19" stroke="#d9d2c6" stroke-width="1"/>
+<text x="128" y="500.19" text-anchor="end" fill="#657067" font-family="Arial, sans-serif" font-size="12">10^20×</text>
+<line x1="140" y1="485.00" x2="1130" y2="485.00" stroke="#d9d2c6" stroke-width="1"/>
+<text x="128" y="489.00" text-anchor="end" fill="#657067" font-family="Arial, sans-serif" font-size="12">10^21×</text>
+<circle cx="634.73" cy="697.38" r="6.5" fill="#bf5c43" stroke="#fffdf7" stroke-width="2"/>
+<circle cx="662.37" cy="668.32" r="6.5" fill="#bf5c43" stroke="#fffdf7" stroke-width="2"/>
+<circle cx="684.24" cy="635.47" r="6.5" fill="#bf5c43" stroke="#fffdf7" stroke-width="2"/>
+<circle cx="706.10" cy="489.46" r="6.5" fill="#bf5c43" stroke="#fffdf7" stroke-width="2"/>
+<text x="643.73" y="684.38" text-anchor="start" fill="#843f31" font-family="Arial, sans-serif" font-size="12" font-weight="700">Jul 1945 · 105×</text>
+<text x="671.37" y="655.32" text-anchor="start" fill="#843f31" font-family="Arial, sans-serif" font-size="12" font-weight="700">Dec 1945 · 41,478×</text>
+<text x="693.24" y="622.47" text-anchor="start" fill="#843f31" font-family="Arial, sans-serif" font-size="12" font-weight="700">Apr 1946 · 35.8 million×</text>
+<text x="715.10" y="502.00" text-anchor="start" fill="#843f31" font-family="Arial, sans-serif" font-size="12" font-weight="700">31 Jul 1946 · 399,623 quadrillion×</text>
+<text x="140.00" y="741" text-anchor="middle" fill="#5c685f" font-family="Arial, sans-serif" font-size="12">1938</text>
+<text x="271.90" y="741" text-anchor="middle" fill="#5c685f" font-family="Arial, sans-serif" font-size="12">1940</text>
+<text x="403.99" y="741" text-anchor="middle" fill="#5c685f" font-family="Arial, sans-serif" font-size="12">1942</text>
+<text x="535.89" y="741" text-anchor="middle" fill="#5c685f" font-family="Arial, sans-serif" font-size="12">1944</text>
+<text x="667.98" y="741" text-anchor="middle" fill="#5c685f" font-family="Arial, sans-serif" font-size="12">1946</text>
+<text x="799.88" y="741" text-anchor="middle" fill="#5c685f" font-family="Arial, sans-serif" font-size="12">1948</text>
+<text x="931.96" y="741" text-anchor="middle" fill="#5c685f" font-family="Arial, sans-serif" font-size="12">1950</text>
+<text x="1063.87" y="741" text-anchor="middle" fill="#5c685f" font-family="Arial, sans-serif" font-size="12">1952</text>
+<text x="74" y="778" fill="#5c685f" font-family="Arial, sans-serif" font-size="12">Bread observations: contemporary retail-price tables. Red points: Pénzportál historical price-index multiples.</text>
+<text x="74" y="798" fill="#5c685f" font-family="Arial, sans-serif" font-size="12">No bread prices are estimated or interpolated for the missing hyperinflation period.</text>
+</svg>
