@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title description" viewBox="0 0 1280 790">
+<title id="title">The 1918 flu pandemic and U.S. life expectancy</title>
+<desc id="description">Annual U.S. life expectancy at birth from 1900 to 2018. It falls from 50.9 years in 1917 to 39.1 in 1918, then rebounds to 54.7 in 1919.</desc>
+<rect width="100%" height="100%" fill="#111114"/>
+<text x="76" y="55" fill="#fff5f5" font-family="Arial, sans-serif" font-size="30" font-weight="700">The year life expectancy fell 11.8 years</text>
+<text x="78" y="87" fill="#d2c9cb" font-family="Arial, sans-serif" font-size="15">U.S. life expectancy at birth · CDC/NCHS · 1900–2018</text>
+<text x="80" y="139" fill="#ff6574" font-family="Arial, sans-serif" font-size="13" font-weight="700">1917 · BEFORE</text>
+<text x="80" y="174" fill="#fff5f5" font-family="Arial, sans-serif" font-size="27" font-weight="700">50.9 years</text>
+<text x="399" y="139" fill="#ff6574" font-family="Arial, sans-serif" font-size="13" font-weight="700">1918 · PANDEMIC YEAR</text>
+<text x="399" y="174" fill="#fff5f5" font-family="Arial, sans-serif" font-size="27" font-weight="700">39.1 years</text>
+<text x="399" y="198" fill="#ff6574" font-family="Arial, sans-serif" font-size="14">−11.8 years (-23.2%)</text>
+<text x="764" y="139" fill="#ff6574" font-family="Arial, sans-serif" font-size="13" font-weight="700">1919 · REBOUND</text>
+<text x="764" y="174" fill="#fff5f5" font-family="Arial, sans-serif" font-size="27" font-weight="700">54.7 years</text>
+<text x="764" y="198" fill="#d2c9cb" font-family="Arial, sans-serif" font-size="14">+15.6 from 1918</text>
+<text x="1060" y="139" fill="#ff6574" font-family="Arial, sans-serif" font-size="13" font-weight="700">ONE-YEAR SNAPSHOT</text>
+<text x="1060" y="174" fill="#fff5f5" font-family="Arial, sans-serif" font-size="16" font-weight="700">Not a lifespan forecast</text>
+<rect x="94" y="272" width="1120" height="350" fill="#1b191d" stroke="#42343a"/>
+<line x1="94" y1="622.00" x2="1214" y2="622.00" stroke="#382e33" stroke-width="1"/>
+<text x="80" y="627.00" text-anchor="end" fill="#c9bdc0" font-family="Arial, sans-serif" font-size="12">30</text>
+<line x1="94" y1="563.67" x2="1214" y2="563.67" stroke="#382e33" stroke-width="1"/>
+<text x="80" y="568.67" text-anchor="end" fill="#c9bdc0" font-family="Arial, sans-serif" font-size="12">40</text>
+<line x1="94" y1="505.33" x2="1214" y2="505.33" stroke="#382e33" stroke-width="1"/>
+<text x="80" y="510.33" text-anchor="end" fill="#c9bdc0" font-family="Arial, sans-serif" font-size="12">50</text>
+<line x1="94" y1="447.00" x2="1214" y2="447.00" stroke="#382e33" stroke-width="1"/>
+<text x="80" y="452.00" text-anchor="end" fill="#c9bdc0" font-family="Arial, sans-serif" font-size="12">60</text>
+<line x1="94" y1="388.67" x2="1214" y2="388.67" stroke="#382e33" stroke-width="1"/>
+<text x="80" y="393.67" text-anchor="end" fill="#c9bdc0" font-family="Arial, sans-serif" font-size="12">70</text>
+<line x1="94" y1="330.33" x2="1214" y2="330.33" stroke="#382e33" stroke-width="1"/>
+<text x="80" y="335.33" text-anchor="end" fill="#c9bdc0" font-family="Arial, sans-serif" font-size="12">80</text>
+<line x1="94" y1="272.00" x2="1214" y2="272.00" stroke="#382e33" stroke-width="1"/>
+<text x="80" y="277.00" text-anchor="end" fill="#c9bdc0" font-family="Arial, sans-serif" font-size="12">90</text>
+<line x1="94.00" y1="622" x2="94.00" y2="627" stroke="#7d6d72"/>
+<text x="94.00" y="646" text-anchor="middle" fill="#c9bdc0" font-family="Arial, sans-serif" font-size="11">1900</text>
+<line x1="188.92" y1="622" x2="188.92" y2="627" stroke="#7d6d72"/>
+<text x="188.92" y="646" text-anchor="middle" fill="#c9bdc0" font-family="Arial, sans-serif" font-size="11">1910</text>
+<line x1="283.83" y1="622" x2="283.83" y2="627" stroke="#7d6d72"/>
+<text x="283.83" y="646" text-anchor="middle" fill="#c9bdc0" font-family="Arial, sans-serif" font-size="11">1920</text>
+<line x1="378.75" y1="622" x2="378.75" y2="627" stroke="#7d6d72"/>
+<text x="378.75" y="646" text-anchor="middle" fill="#c9bdc0" font-family="Arial, sans-serif" font-size="11">1930</text>
+<line x1="473.66" y1="622" x2="473.66" y2="627" stroke="#7d6d72"/>
+<text x="473.66" y="646" text-anchor="middle" fill="#c9bdc0" font-family="Arial, sans-serif" font-size="11">1940</text>
+<line x1="568.58" y1="622" x2="568.58" y2="627" stroke="#7d6d72"/>
+<text x="568.58" y="646" text-anchor="middle" fill="#c9bdc0" font-family="Arial, sans-serif" font-size="11">1950</text>
+<line x1="663.49" y1="622" x2="663.49" y2="627" stroke="#7d6d72"/>
+<text x="663.49" y="646" text-anchor="middle" fill="#c9bdc0" font-family="Arial, sans-serif" font-size="11">1960</text>
+<line x1="758.41" y1="622" x2="758.41" y2="627" stroke="#7d6d72"/>
+<text x="758.41" y="646" text-anchor="middle" fill="#c9bdc0" font-family="Arial, sans-serif" font-size="11">1970</text>
+<line x1="853.32" y1="622" x2="853.32" y2="627" stroke="#7d6d72"/>
+<text x="853.32" y="646" text-anchor="middle" fill="#c9bdc0" font-family="Arial, sans-serif" font-size="11">1980</text>
+<line x1="948.24" y1="622" x2="948.24" y2="627" stroke="#7d6d72"/>
+<text x="948.24" y="646" text-anchor="middle" fill="#c9bdc0" font-family="Arial, sans-serif" font-size="11">1990</text>
+<line x1="1043.15" y1="622" x2="1043.15" y2="627" stroke="#7d6d72"/>
+<text x="1043.15" y="646" text-anchor="middle" fill="#c9bdc0" font-family="Arial, sans-serif" font-size="11">2000</text>
+<line x1="1138.07" y1="622" x2="1138.07" y2="627" stroke="#7d6d72"/>
+<text x="1138.07" y="646" text-anchor="middle" fill="#c9bdc0" font-family="Arial, sans-serif" font-size="11">2010</text>
+<line x1="1214.00" y1="622" x2="1214.00" y2="627" stroke="#7d6d72"/>
+<text x="1214.00" y="646" text-anchor="middle" fill="#c9bdc0" font-family="Arial, sans-serif" font-size="11">2018</text>
+<rect x="259.85" y="272" width="10" height="350" fill="#b8172c" opacity="0.18"/>
+<line x1="264.85" y1="272" x2="264.85" y2="622" stroke="#ff5263" stroke-width="1.5" stroke-dasharray="5 6"/>
+<path d="M 94.00 521.08 L 103.49 510.58 L 112.98 496.58 L 122.47 502.42 L 131.97 519.33 L 141.46 512.92 L 150.95 512.92 L 160.44 519.33 L 169.93 498.92 L 179.42 493.08 L 188.92 505.33 L 198.41 490.17 L 207.90 484.92 L 217.39 490.75 L 226.88 480.83 L 236.37 479.08 L 245.86 495.42 L 255.36 500.08 L 264.85 568.92 L 274.34 477.92 L 283.83 481.42 L 293.32 442.33 L 302.81 449.33 L 312.31 463.33 L 321.80 448.75 L 331.29 452.83 L 340.78 466.25 L 350.27 444.67 L 359.76 465.67 L 369.25 463.92 L 378.75 448.75 L 388.24 440.58 L 397.73 434.75 L 407.22 427.75 L 416.71 440.58 L 426.20 437.08 L 435.69 455.75 L 445.19 447.00 L 454.68 426.58 L 464.17 425.42 L 473.66 430.08 L 483.15 419.00 L 492.64 410.83 L 502.14 427.75 L 511.63 416.67 L 521.12 412.58 L 530.61 407.92 L 540.10 407.33 L 549.59 405.00 L 559.08 400.33 L 568.58 399.17 L 578.07 398.00 L 587.56 396.83 L 597.05 395.67 L 606.54 391.00 L 616.03 391.00 L 625.53 390.42 L 635.02 391.58 L 644.51 391.00 L 654.00 389.25 L 663.49 390.42 L 672.98 387.50 L 682.47 388.08 L 691.97 389.25 L 701.46 387.50 L 710.95 387.50 L 720.44 387.50 L 729.93 385.75 L 739.42 387.50 L 748.92 385.75 L 758.41 384.00 L 767.90 382.25 L 777.39 381.67 L 786.88 380.50 L 796.37 377.00 L 805.86 373.50 L 815.36 371.75 L 824.85 369.42 L 834.34 368.25 L 843.83 365.92 L 853.32 367.08 L 862.81 364.75 L 872.31 362.42 L 881.80 361.83 L 891.29 361.25 L 900.78 361.25 L 910.27 361.25 L 919.76 360.08 L 929.25 360.08 L 938.75 358.92 L 948.24 357.17 L 957.73 356.58 L 967.22 354.83 L 976.71 356.58 L 986.20 355.42 L 995.69 354.83 L 1005.19 353.08 L 1014.68 350.75 L 1024.17 349.58 L 1033.66 349.58 L 1043.15 349.00 L 1052.64 347.83 L 1062.14 347.83 L 1071.63 344.33 L 1081.12 344.92 L 1090.61 344.33 L 1100.10 343.17 L 1109.59 341.42 L 1119.08 340.83 L 1128.58 339.08 L 1138.07 337.92 L 1147.56 337.92 L 1157.05 337.33 L 1166.54 337.33 L 1176.03 336.75 L 1185.53 337.92 L 1195.02 337.92 L 1204.51 338.50 L 1214.00 337.92 L 1214 622 L 94 622 Z" fill="#a9162a" opacity="0.22"/>
+<path d="M 94.00 521.08 L 103.49 510.58 L 112.98 496.58 L 122.47 502.42 L 131.97 519.33 L 141.46 512.92 L 150.95 512.92 L 160.44 519.33 L 169.93 498.92 L 179.42 493.08 L 188.92 505.33 L 198.41 490.17 L 207.90 484.92 L 217.39 490.75 L 226.88 480.83 L 236.37 479.08 L 245.86 495.42 L 255.36 500.08 L 264.85 568.92 L 274.34 477.92 L 283.83 481.42 L 293.32 442.33 L 302.81 449.33 L 312.31 463.33 L 321.80 448.75 L 331.29 452.83 L 340.78 466.25 L 350.27 444.67 L 359.76 465.67 L 369.25 463.92 L 378.75 448.75 L 388.24 440.58 L 397.73 434.75 L 407.22 427.75 L 416.71 440.58 L 426.20 437.08 L 435.69 455.75 L 445.19 447.00 L 454.68 426.58 L 464.17 425.42 L 473.66 430.08 L 483.15 419.00 L 492.64 410.83 L 502.14 427.75 L 511.63 416.67 L 521.12 412.58 L 530.61 407.92 L 540.10 407.33 L 549.59 405.00 L 559.08 400.33 L 568.58 399.17 L 578.07 398.00 L 587.56 396.83 L 597.05 395.67 L 606.54 391.00 L 616.03 391.00 L 625.53 390.42 L 635.02 391.58 L 644.51 391.00 L 654.00 389.25 L 663.49 390.42 L 672.98 387.50 L 682.47 388.08 L 691.97 389.25 L 701.46 387.50 L 710.95 387.50 L 720.44 387.50 L 729.93 385.75 L 739.42 387.50 L 748.92 385.75 L 758.41 384.00 L 767.90 382.25 L 777.39 381.67 L 786.88 380.50 L 796.37 377.00 L 805.86 373.50 L 815.36 371.75 L 824.85 369.42 L 834.34 368.25 L 843.83 365.92 L 853.32 367.08 L 862.81 364.75 L 872.31 362.42 L 881.80 361.83 L 891.29 361.25 L 900.78 361.25 L 910.27 361.25 L 919.76 360.08 L 929.25 360.08 L 938.75 358.92 L 948.24 357.17 L 957.73 356.58 L 967.22 354.83 L 976.71 356.58 L 986.20 355.42 L 995.69 354.83 L 1005.19 353.08 L 1014.68 350.75 L 1024.17 349.58 L 1033.66 349.58 L 1043.15 349.00 L 1052.64 347.83 L 1062.14 347.83 L 1071.63 344.33 L 1081.12 344.92 L 1090.61 344.33 L 1100.10 343.17 L 1109.59 341.42 L 1119.08 340.83 L 1128.58 339.08 L 1138.07 337.92 L 1147.56 337.92 L 1157.05 337.33 L 1166.54 337.33 L 1176.03 336.75 L 1185.53 337.92 L 1195.02 337.92 L 1204.51 338.50 L 1214.00 337.92" fill="none" stroke="#ff5263" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="264.85" cy="568.92" r="10" fill="#111114" stroke="#ff5263" stroke-width="4"/>
+<text x="282.85" y="552.92" fill="#fff5f5" font-family="Arial, sans-serif" font-size="13" font-weight="700">39.1</text>
+<text x="80" y="698" fill="#ff6574" font-family="Arial, sans-serif" font-size="13" font-weight="700">WHAT THE LINE MEASURES</text>
+<text x="80" y="721" fill="#ded5d7" font-family="Arial, sans-serif" font-size="13">Period life expectancy summarizes that year’s death rates across ages; it is not the average age of people who died.</text>
+<text x="80" y="754" fill="#95888c" font-family="Arial, sans-serif" font-size="11">Source: CDC/NCHS · All races, both sexes · Historical annual data · The chart shows association, not causation.</text>
+</svg>
