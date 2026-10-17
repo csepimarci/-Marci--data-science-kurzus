@@ -173,39 +173,39 @@ def render_svg(summary):
             "</desc>"
         ),
         '<defs><linearGradient id="gas-fill" x1="0" x2="0" y1="0" y2="1">'
-        '<stop offset="0%" stop-color="#47c9d0" stop-opacity="0.34"/>'
-        '<stop offset="100%" stop-color="#47c9d0" stop-opacity="0.01"/>'
+        '<stop offset="0%" stop-color="#ff9f43" stop-opacity="0.38"/>'
+        '<stop offset="100%" stop-color="#ff9f43" stop-opacity="0.01"/>'
         "</linearGradient></defs>",
-        '<rect width="100%" height="100%" fill="#102b3a"/>',
-        '<text x="74" y="54" fill="#f1f7f8" font-family="Arial, sans-serif" '
+        '<rect width="100%" height="100%" fill="#241b18"/>',
+        '<text x="74" y="54" fill="#fff4e8" font-family="Arial, sans-serif" '
         'font-size="29" font-weight="700">Europe’s gas shock: before and after '
         'the Russian invasion</text>',
-        '<text x="76" y="85" fill="#b8d0d4" font-family="Arial, sans-serif" '
+        '<text x="76" y="85" fill="#d9c4b3" font-family="Arial, sans-serif" '
         'font-size="15">European natural gas · monthly average · nominal '
         'USD per MMBtu · '
         f'{first_date.year}–{last_date.year}</text>',
-        '<rect x="74" y="112" width="1132" height="1" fill="#31505b"/>',
+        '<rect x="74" y="112" width="1132" height="1" fill="#594235"/>',
     ]
     cards = (
         (
             "2021 PRE-WAR AVERAGE",
             f'${summary["baseline_average"]:.2f}',
-            "#b7d8c7",
+            "#ffd08a",
         ),
         (
             f'POST-INVASION PEAK · {summary["peak_date"]:%b %Y}',
             f'${summary["peak_price"]:.2f}',
-            "#47c9d0",
+            "#ff9f43",
         ),
         (
             "PEAK VS 2021 AVERAGE",
             f'+{summary["peak_vs_baseline"]:.0f}%',
-            "#ff9278",
+            "#ffc15e",
         ),
         (
             f'LATEST · {summary["latest_date"]:%b %Y}',
             f'${summary["latest_price"]:.2f}',
-            "#d4e1e3",
+            "#e8d7c7",
         ),
     )
     card_width, card_gap = 264, 16
@@ -214,8 +214,8 @@ def render_svg(summary):
         elements.extend(
             [
                 f'<rect x="{x}" y="132" width="{card_width}" height="76" '
-                'rx="8" fill="#183746" stroke="#31505b"/>',
-                f'<text x="{x+15}" y="158" fill="#b8d0d4" '
+                'rx="8" fill="#34251e" stroke="#594235"/>',
+                f'<text x="{x+15}" y="158" fill="#d9c4b3" '
                 'font-family="Arial, sans-serif" font-size="10" '
                 f'font-weight="700">{html.escape(label)}</text>',
                 f'<text x="{x+15}" y="191" fill="{accent}" '
@@ -226,16 +226,16 @@ def render_svg(summary):
 
     elements.append(
         f'<rect x="{left}" y="{top}" width="{right-left}" '
-        f'height="{bottom-top}" fill="#153342" stroke="#31505b"/>'
+        f'height="{bottom-top}" fill="#30231d" stroke="#594235"/>'
     )
     for price in range(0, y_max + 1, 10):
         y = y_position(price, y_max, top, bottom)
         elements.extend(
             [
                 f'<line x1="{left}" y1="{y:.2f}" x2="{right}" y2="{y:.2f}" '
-                'stroke="#294653" stroke-width="1"/>',
+                'stroke="#49372d" stroke-width="1"/>',
                 f'<text x="{left-12}" y="{y+5:.2f}" text-anchor="end" '
-                'fill="#b8d0d4" font-family="Arial, sans-serif" '
+                'fill="#d9c4b3" font-family="Arial, sans-serif" '
                 f'font-size="12">${price}</text>',
             ]
         )
@@ -248,9 +248,9 @@ def render_svg(summary):
         elements.extend(
             [
                 f'<line x1="{x:.2f}" y1="{top}" x2="{x:.2f}" y2="{bottom}" '
-                'stroke="#24414e" stroke-width="1"/>',
+                'stroke="#48352a" stroke-width="1"/>',
                 f'<text x="{x:.2f}" y="{bottom+25}" text-anchor="middle" '
-                'fill="#b8d0d4" font-family="Arial, sans-serif" '
+                'fill="#d9c4b3" font-family="Arial, sans-serif" '
                 f'font-size="12">{year}</text>',
             ]
         )
@@ -260,31 +260,31 @@ def render_svg(summary):
         [
             f'<path d="{area_path}" fill="url(#gas-fill)"/>',
             f'<line x1="{left}" y1="{baseline_y:.2f}" x2="{right}" '
-            f'y2="{baseline_y:.2f}" stroke="#b7d8c7" stroke-width="1.5" '
+            f'y2="{baseline_y:.2f}" stroke="#ffd08a" stroke-width="1.5" '
             'stroke-dasharray="7 5"/>',
-            f'<text x="{left+8}" y="{baseline_y-8:.2f}" fill="#d5e9df" '
+            f'<text x="{left+8}" y="{baseline_y-8:.2f}" fill="#ffe1b5" '
             'font-family="Arial, sans-serif" font-size="11">'
             f'2021 average · ${summary["baseline_average"]:.2f}</text>',
-            f'<path d="{line_path}" fill="none" stroke="#47c9d0" '
+            f'<path d="{line_path}" fill="none" stroke="#ff9f43" '
             'stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round"/>',
             f'<line x1="{invasion_x:.2f}" y1="{top}" x2="{invasion_x:.2f}" '
-            f'y2="{bottom}" stroke="#ff9278" stroke-width="2" '
+            f'y2="{bottom}" stroke="#ffc15e" stroke-width="2" '
             'stroke-dasharray="7 5"/>',
             f'<rect x="{invasion_x+10:.2f}" y="{top+10}" width="247" '
-            'height="38" rx="5" fill="#3a302e" stroke="#81554a"/>',
-            f'<text x="{invasion_x+20:.2f}" y="{top+26}" fill="#ffad98" '
+            'height="38" rx="5" fill="#493329" stroke="#a56836"/>',
+            f'<text x="{invasion_x+20:.2f}" y="{top+26}" fill="#ffc15e" '
             'font-family="Arial, sans-serif" font-size="10" '
             'font-weight="700">24 FEB 2022</text>',
-            f'<text x="{invasion_x+20:.2f}" y="{top+41}" fill="#f1f7f8" '
+            f'<text x="{invasion_x+20:.2f}" y="{top+41}" fill="#fff4e8" '
             'font-family="Arial, sans-serif" font-size="11">'
             "Russia's full-scale invasion of Ukraine</text>",
             f'<circle cx="{peak_x:.2f}" cy="{peak_y:.2f}" r="6" '
-            'fill="#ff9278" stroke="#102b3a" stroke-width="2"/>',
+            'fill="#ffc15e" stroke="#241b18" stroke-width="2"/>',
             f'<line x1="{peak_x:.2f}" y1="{peak_y-7:.2f}" '
             f'x2="{peak_x+30:.2f}" y2="{peak_y-43:.2f}" '
-            'stroke="#ff9278" stroke-width="1.3"/>',
+            'stroke="#ffc15e" stroke-width="1.3"/>',
             f'<text x="{peak_x+35:.2f}" y="{peak_y-45:.2f}" '
-            'fill="#ffad98" font-family="Arial, sans-serif" font-size="12" '
+            'fill="#ffc15e" font-family="Arial, sans-serif" font-size="12" '
             'font-weight="700">'
             f'{summary["peak_date"]:%b %Y} PEAK · '
             f'${summary["peak_price"]:.2f}</text>',
@@ -294,19 +294,19 @@ def render_svg(summary):
         (
             date(2022, 2, 1),
             summary["february_2022_price"],
-            "#b7d8c7",
+            "#ffd08a",
         ),
         (
             date(2022, 3, 1),
             summary["march_2022_price"],
-            "#ffad98",
+            "#ffc15e",
         ),
     ):
         x = x_position(month_date, first_date, last_date, left, right)
         y = y_position(price, y_max, top, bottom)
         elements.append(
             f'<circle cx="{x:.2f}" cy="{y:.2f}" r="4.5" fill="{color}" '
-            'stroke="#102b3a" stroke-width="1.5"/>'
+            'stroke="#241b18" stroke-width="1.5"/>'
         )
 
     march_x = x_position(date(2022, 3, 1), first_date, last_date, left, right)
@@ -314,14 +314,14 @@ def render_svg(summary):
     elements.extend(
         [
             f'<text x="{march_x+10:.2f}" y="{march_y+20:.2f}" '
-            'fill="#ffad98" font-family="Arial, sans-serif" font-size="11">'
+            'fill="#ffc15e" font-family="Arial, sans-serif" font-size="11">'
             f'Mar 2022 · ${summary["march_2022_price"]:.2f}</text>',
-            '<text x="74" y="722" fill="#d4e1e3" '
+            '<text x="74" y="722" fill="#e8d7c7" '
             'font-family="Arial, sans-serif" font-size="12">'
             "2021 prices were already rising; March 2022 averaged "
             f'+{summary["february_to_march_change"]:.0f}% vs February. '
             "Timing is not proof of a single cause.</text>",
-            '<text x="74" y="760" fill="#9fb9bf" '
+            '<text x="74" y="760" fill="#b99e8c" '
             'font-family="Arial, sans-serif" font-size="11">'
             "Source: World Bank Commodity Price Data (Pink Sheet), "
             "Natural Gas, Europe (Netherlands TTF from Apr 2015); "

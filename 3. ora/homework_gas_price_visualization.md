@@ -5,7 +5,8 @@
 *Figure 1. World Bank European natural gas reference price, in nominal US
 dollars per million British thermal units. The February 2022 marker shows the
 invasion date; the monthly averages show the surrounding price movement, not
-the invasion’s isolated causal effect.*
+the invasion’s isolated causal effect. The warm orange-and-amber palette
+highlights the price surge against a dark, warm background.*
 
 ## Executive summary
 

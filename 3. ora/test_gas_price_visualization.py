@@ -61,7 +61,8 @@ class GasPriceVisualizationTests(unittest.TestCase):
         self.assertIn("Aug 2022 PEAK", svg)
         self.assertIn("Natural Gas, Europe (Netherlands TTF", svg)
         self.assertIn("not proof", svg)
-        self.assertIn('fill="#47c9d0"', svg)
+        self.assertIn('fill="#ff9f43"', svg)
+        self.assertIn('fill="#241b18"', svg)
 
     def test_snapshot_has_expected_period_and_invasion_era_peak(self):
         rows = load_rows()
