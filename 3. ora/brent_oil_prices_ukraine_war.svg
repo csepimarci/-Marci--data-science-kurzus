@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title description" viewBox="0 0 1280 800">
+<title id="title">Brent crude oil prices before and after Russia invaded Ukraine</title>
+<desc id="description">Monthly average Brent crude oil price from January 2017 to September 2026, in nominal US dollars per barrel. A vertical marker shows Russia's full-scale invasion of Ukraine on 24 February 2022. Prices rose from January to March 2022 and reached a later peak in June 2022. The chart does not attribute all price changes to the invasion.</desc>
+<defs><linearGradient id="oil-fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#e7a83e" stop-opacity="0.34"/><stop offset="100%" stop-color="#e7a83e" stop-opacity="0.01"/></linearGradient></defs>
+<rect width="100%" height="100%" fill="#191b1a"/>
+<text x="74" y="54" fill="#f6f1e7" font-family="Arial, sans-serif" font-size="29" font-weight="700">Oil prices before and after the Russian invasion of Ukraine</text>
+<text x="76" y="85" fill="#c6c0b4" font-family="Arial, sans-serif" font-size="15">Brent crude · monthly average · nominal USD per barrel · 2017–2026</text>
+<rect x="74" y="112" width="1132" height="1" fill="#45433c"/>
+<rect x="76" y="132" width="264" height="76" rx="8" fill="#252722" stroke="#45433c"/>
+<text x="91" y="158" fill="#b8b2a7" font-family="Arial, sans-serif" font-size="10" font-weight="700">2021 PRE-WAR AVERAGE</text>
+<text x="91" y="191" fill="#d3b46a" font-family="Arial, sans-serif" font-size="25" font-weight="700">$70.68</text>
+<rect x="356" y="132" width="264" height="76" rx="8" fill="#252722" stroke="#45433c"/>
+<text x="371" y="158" fill="#b8b2a7" font-family="Arial, sans-serif" font-size="10" font-weight="700">POST-INVASION PEAK · Jun 2022</text>
+<text x="371" y="191" fill="#e7a83e" font-family="Arial, sans-serif" font-size="25" font-weight="700">$122.71</text>
+<rect x="636" y="132" width="264" height="76" rx="8" fill="#252722" stroke="#45433c"/>
+<text x="651" y="158" fill="#b8b2a7" font-family="Arial, sans-serif" font-size="10" font-weight="700">PEAK VS 2021 AVERAGE</text>
+<text x="651" y="191" fill="#e47a54" font-family="Arial, sans-serif" font-size="25" font-weight="700">+74%</text>
+<rect x="916" y="132" width="264" height="76" rx="8" fill="#252722" stroke="#45433c"/>
+<text x="931" y="158" fill="#b8b2a7" font-family="Arial, sans-serif" font-size="10" font-weight="700">LATEST · Sep 2026</text>
+<text x="931" y="191" fill="#c6c0b4" font-family="Arial, sans-serif" font-size="25" font-weight="700">$114.16</text>
+<rect x="92" y="270" width="1133" height="380" fill="#20231f" stroke="#45433c"/>
+<line x1="92" y1="650.00" x2="1225" y2="650.00" stroke="#393b34" stroke-width="1"/>
+<text x="80" y="655.00" text-anchor="end" fill="#b8b2a7" font-family="Arial, sans-serif" font-size="12">$0</text>
+<line x1="92" y1="595.71" x2="1225" y2="595.71" stroke="#393b34" stroke-width="1"/>
+<text x="80" y="600.71" text-anchor="end" fill="#b8b2a7" font-family="Arial, sans-serif" font-size="12">$20</text>
+<line x1="92" y1="541.43" x2="1225" y2="541.43" stroke="#393b34" stroke-width="1"/>
+<text x="80" y="546.43" text-anchor="end" fill="#b8b2a7" font-family="Arial, sans-serif" font-size="12">$40</text>
+<line x1="92" y1="487.14" x2="1225" y2="487.14" stroke="#393b34" stroke-width="1"/>
+<text x="80" y="492.14" text-anchor="end" fill="#b8b2a7" font-family="Arial, sans-serif" font-size="12">$60</text>
+<line x1="92" y1="432.86" x2="1225" y2="432.86" stroke="#393b34" stroke-width="1"/>
+<text x="80" y="437.86" text-anchor="end" fill="#b8b2a7" font-family="Arial, sans-serif" font-size="12">$80</text>
+<line x1="92" y1="378.57" x2="1225" y2="378.57" stroke="#393b34" stroke-width="1"/>
+<text x="80" y="383.57" text-anchor="end" fill="#b8b2a7" font-family="Arial, sans-serif" font-size="12">$100</text>
+<line x1="92" y1="324.29" x2="1225" y2="324.29" stroke="#393b34" stroke-width="1"/>
+<text x="80" y="329.29" text-anchor="end" fill="#b8b2a7" font-family="Arial, sans-serif" font-size="12">$120</text>
+<line x1="92" y1="270.00" x2="1225" y2="270.00" stroke="#393b34" stroke-width="1"/>
+<text x="80" y="275.00" text-anchor="end" fill="#b8b2a7" font-family="Arial, sans-serif" font-size="12">$140</text>
+<line x1="92.00" y1="270" x2="92.00" y2="650" stroke="#30322d" stroke-width="1"/>
+<text x="92.00" y="675" text-anchor="middle" fill="#c6c0b4" font-family="Arial, sans-serif" font-size="12">2017</text>
+<line x1="326.41" y1="270" x2="326.41" y2="650" stroke="#30322d" stroke-width="1"/>
+<text x="326.41" y="675" text-anchor="middle" fill="#c6c0b4" font-family="Arial, sans-serif" font-size="12">2019</text>
+<line x1="560.83" y1="270" x2="560.83" y2="650" stroke="#30322d" stroke-width="1"/>
+<text x="560.83" y="675" text-anchor="middle" fill="#c6c0b4" font-family="Arial, sans-serif" font-size="12">2021</text>
+<line x1="795.24" y1="270" x2="795.24" y2="650" stroke="#30322d" stroke-width="1"/>
+<text x="795.24" y="675" text-anchor="middle" fill="#c6c0b4" font-family="Arial, sans-serif" font-size="12">2023</text>
+<line x1="1029.66" y1="270" x2="1029.66" y2="650" stroke="#30322d" stroke-width="1"/>
+<text x="1029.66" y="675" text-anchor="middle" fill="#c6c0b4" font-family="Arial, sans-serif" font-size="12">2025</text>
+<line x1="1146.86" y1="270" x2="1146.86" y2="650" stroke="#30322d" stroke-width="1"/>
+<text x="1146.86" y="675" text-anchor="middle" fill="#c6c0b4" font-family="Arial, sans-serif" font-size="12">2026</text>
+<path d="M 92.00 650 L 92.00 501.85 L 101.77 501.07 L 111.53 509.97 L 121.30 508.02 L 131.07 513.39 L 140.84 524.14 L 150.60 518.41 L 160.37 509.67 L 170.14 497.59 L 179.91 493.90 L 189.67 479.79 L 199.44 475.28 L 209.21 462.50 L 218.97 472.70 L 228.74 470.80 L 238.51 454.27 L 248.28 441.05 L 258.04 448.03 L 267.81 448.46 L 277.58 453.13 L 287.34 435.87 L 297.11 430.06 L 306.88 474.25 L 316.65 494.31 L 326.41 488.74 L 336.18 476.39 L 345.95 470.48 L 355.72 456.66 L 365.48 456.42 L 375.25 475.69 L 385.02 476.50 L 394.78 489.75 L 404.55 479.46 L 414.32 487.93 L 424.09 478.43 L 433.85 467.30 L 443.62 477.24 L 453.39 498.92 L 463.16 563.12 L 472.92 600.11 L 482.69 570.25 L 492.46 540.70 L 502.22 532.63 L 511.99 528.56 L 521.76 538.96 L 531.53 540.91 L 541.29 534.13 L 551.06 514.31 L 560.83 501.34 L 570.59 480.95 L 580.36 472.46 L 590.13 474.09 L 599.90 463.99 L 609.66 451.42 L 619.43 445.97 L 629.20 457.96 L 638.97 447.81 L 648.73 423.25 L 658.50 430.01 L 668.27 448.68 L 678.03 415.19 L 687.80 386.36 L 697.57 331.75 L 707.34 366.14 L 717.10 342.36 L 726.87 316.93 L 736.64 346.19 L 746.41 377.35 L 756.17 406.37 L 765.94 396.68 L 775.71 401.86 L 785.47 430.36 L 795.24 426.07 L 805.01 425.83 L 814.78 437.12 L 824.54 420.26 L 834.31 445.15 L 844.08 446.86 L 853.84 432.56 L 863.61 416.16 L 873.38 395.62 L 883.15 404.09 L 892.91 424.88 L 902.68 439.29 L 912.45 432.53 L 922.22 423.41 L 931.98 418.17 L 941.75 405.88 L 951.52 428.11 L 961.28 426.75 L 971.05 418.88 L 980.82 431.88 L 990.59 449.09 L 1000.35 444.72 L 1010.12 448.19 L 1019.89 449.52 L 1029.66 434.84 L 1039.42 445.23 L 1049.19 452.59 L 1058.96 465.08 L 1068.72 475.06 L 1078.49 456.09 L 1088.26 457.18 L 1098.03 465.78 L 1107.79 465.46 L 1117.56 474.82 L 1127.33 476.83 L 1137.09 480.25 L 1146.86 469.23 L 1156.63 457.58 L 1166.40 370.08 L 1176.16 331.64 L 1185.93 359.19 L 1195.70 418.20 L 1205.47 422.65 L 1215.23 402.78 L 1225.00 340.14 L 1225.00 650 Z" fill="url(#oil-fill)"/>
+<line x1="92" y1="458.16" x2="1225" y2="458.16" stroke="#d3b46a" stroke-width="1.5" stroke-dasharray="7 5"/>
+<text x="100" y="450.16" fill="#e5ca87" font-family="Arial, sans-serif" font-size="11">2021 average · $70.68</text>
+<path d="M 92.00 501.85 L 101.77 501.07 L 111.53 509.97 L 121.30 508.02 L 131.07 513.39 L 140.84 524.14 L 150.60 518.41 L 160.37 509.67 L 170.14 497.59 L 179.91 493.90 L 189.67 479.79 L 199.44 475.28 L 209.21 462.50 L 218.97 472.70 L 228.74 470.80 L 238.51 454.27 L 248.28 441.05 L 258.04 448.03 L 267.81 448.46 L 277.58 453.13 L 287.34 435.87 L 297.11 430.06 L 306.88 474.25 L 316.65 494.31 L 326.41 488.74 L 336.18 476.39 L 345.95 470.48 L 355.72 456.66 L 365.48 456.42 L 375.25 475.69 L 385.02 476.50 L 394.78 489.75 L 404.55 479.46 L 414.32 487.93 L 424.09 478.43 L 433.85 467.30 L 443.62 477.24 L 453.39 498.92 L 463.16 563.12 L 472.92 600.11 L 482.69 570.25 L 492.46 540.70 L 502.22 532.63 L 511.99 528.56 L 521.76 538.96 L 531.53 540.91 L 541.29 534.13 L 551.06 514.31 L 560.83 501.34 L 570.59 480.95 L 580.36 472.46 L 590.13 474.09 L 599.90 463.99 L 609.66 451.42 L 619.43 445.97 L 629.20 457.96 L 638.97 447.81 L 648.73 423.25 L 658.50 430.01 L 668.27 448.68 L 678.03 415.19 L 687.80 386.36 L 697.57 331.75 L 707.34 366.14 L 717.10 342.36 L 726.87 316.93 L 736.64 346.19 L 746.41 377.35 L 756.17 406.37 L 765.94 396.68 L 775.71 401.86 L 785.47 430.36 L 795.24 426.07 L 805.01 425.83 L 814.78 437.12 L 824.54 420.26 L 834.31 445.15 L 844.08 446.86 L 853.84 432.56 L 863.61 416.16 L 873.38 395.62 L 883.15 404.09 L 892.91 424.88 L 902.68 439.29 L 912.45 432.53 L 922.22 423.41 L 931.98 418.17 L 941.75 405.88 L 951.52 428.11 L 961.28 426.75 L 971.05 418.88 L 980.82 431.88 L 990.59 449.09 L 1000.35 444.72 L 1010.12 448.19 L 1019.89 449.52 L 1029.66 434.84 L 1039.42 445.23 L 1049.19 452.59 L 1058.96 465.08 L 1068.72 475.06 L 1078.49 456.09 L 1088.26 457.18 L 1098.03 465.78 L 1107.79 465.46 L 1117.56 474.82 L 1127.33 476.83 L 1137.09 480.25 L 1146.86 469.23 L 1156.63 457.58 L 1166.40 370.08 L 1176.16 331.64 L 1185.93 359.19 L 1195.70 418.20 L 1205.47 422.65 L 1215.23 402.78 L 1225.00 340.14" fill="none" stroke="#e7a83e" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="695.82" y1="270" x2="695.82" y2="650" stroke="#e47a54" stroke-width="2" stroke-dasharray="7 5"/>
+<rect x="705.82" y="280" width="247" height="38" rx="5" fill="#302522" stroke="#7d493b"/>
+<text x="715.82" y="296" fill="#f09a72" font-family="Arial, sans-serif" font-size="10" font-weight="700">24 FEB 2022</text>
+<text x="715.82" y="311" fill="#f6f1e7" font-family="Arial, sans-serif" font-size="11">Russia's full-scale invasion of Ukraine</text>
+<circle cx="726.87" cy="316.93" r="6" fill="#e47a54" stroke="#191b1a" stroke-width="2"/>
+<line x1="726.87" y1="309.93" x2="760.87" y2="268.93" stroke="#e47a54" stroke-width="1.3"/>
+<text x="765.87" y="266.93" fill="#f09a72" font-family="Arial, sans-serif" font-size="12" font-weight="700">Jun 2022 PEAK · $122.71</text>
+<circle cx="678.03" cy="415.19" r="4.5" fill="#d3b46a" stroke="#191b1a" stroke-width="1.5"/>
+<circle cx="697.57" cy="331.75" r="4.5" fill="#f09a72" stroke="#191b1a" stroke-width="1.5"/>
+<text x="707.57" y="351.75" fill="#f09a72" font-family="Arial, sans-serif" font-size="11">Mar 2022 · $117.25</text>
+<text x="74" y="722" fill="#c6c0b4" font-family="Arial, sans-serif" font-size="12">Brent had already climbed before the invasion; March 2022 was +36% vs January. The chart shows timing, not a single-cause estimate.</text>
+<text x="74" y="760" fill="#9e998e" font-family="Arial, sans-serif" font-size="11">Source: U.S. EIA Brent Europe spot price, monthly average (via FRED). Nominal dollars; not inflation-adjusted.</text>
+</svg>

@@ -1,4 +1,4 @@
-g# Two shocks, two recoveries: U.S. airline passenger travel
+# Two shocks, two recoveries: U.S. airline passenger travel
 
 ![Line chart titled “U.S. airline passenger travel after 9/11 and COVID-19.” The seasonally adjusted monthly passenger-mile series is annotated with the September 2001 decline and the April 2020 low.](./air_travel_disruptions.svg)
 
