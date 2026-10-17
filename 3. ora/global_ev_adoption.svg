@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title description" viewBox="0 0 1420 1040">
+<title id="title">Electric-car adoption leaders and selected subsidy milestones</title>
+<desc id="description">Annual electric-vehicle shares of new passenger-car sales from 2010 to 2025. The lines compare the eight highest-share countries in the latest year with the world average. A lower panel lists selected subsidy and purchase-tax policy milestones; it does not establish causation.</desc>
+<rect width="100%" height="100%" fill="#172b4d"/>
+<text x="78" y="55" fill="#f1f4f8" font-family="Arial, sans-serif" font-size="30" font-weight="700">Where electric cars took hold first</text>
+<text x="80" y="87" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="15">IEA EV sales share for new passenger cars · 2010-2025 · EV includes battery-electric and plug-in hybrid</text>
+<rect x="72" y="118" width="1276" height="1" fill="#395174"/>
+<text x="80" y="153" fill="#f1f4f8" font-family="Arial, sans-serif" font-size="15" font-weight="700">COUNTRY TRAJECTORIES</text>
+<rect x="92" y="192" width="918" height="358" fill="#20395f" stroke="#395174" stroke-width="1"/>
+<line x1="92" y1="550.00" x2="1010" y2="550.00" stroke="#395174" stroke-width="1"/>
+<text x="79" y="555.00" text-anchor="end" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="13">0</text>
+<line x1="92" y1="478.40" x2="1010" y2="478.40" stroke="#395174" stroke-width="1"/>
+<text x="79" y="483.40" text-anchor="end" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="13">20</text>
+<line x1="92" y1="406.80" x2="1010" y2="406.80" stroke="#395174" stroke-width="1"/>
+<text x="79" y="411.80" text-anchor="end" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="13">40</text>
+<line x1="92" y1="335.20" x2="1010" y2="335.20" stroke="#395174" stroke-width="1"/>
+<text x="79" y="340.20" text-anchor="end" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="13">60</text>
+<line x1="92" y1="263.60" x2="1010" y2="263.60" stroke="#395174" stroke-width="1"/>
+<text x="79" y="268.60" text-anchor="end" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="13">80</text>
+<line x1="92" y1="192.00" x2="1010" y2="192.00" stroke="#395174" stroke-width="1"/>
+<text x="79" y="197.00" text-anchor="end" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="13">100</text>
+<line x1="92.00" y1="192" x2="92.00" y2="550" stroke="#314a6c" stroke-width="1"/>
+<text x="92.00" y="575" text-anchor="middle" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="13">2010</text>
+<line x1="275.60" y1="192" x2="275.60" y2="550" stroke="#314a6c" stroke-width="1"/>
+<text x="275.60" y="575" text-anchor="middle" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="13">2013</text>
+<line x1="459.20" y1="192" x2="459.20" y2="550" stroke="#314a6c" stroke-width="1"/>
+<text x="459.20" y="575" text-anchor="middle" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="13">2016</text>
+<line x1="642.80" y1="192" x2="642.80" y2="550" stroke="#314a6c" stroke-width="1"/>
+<text x="642.80" y="575" text-anchor="middle" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="13">2019</text>
+<line x1="826.40" y1="192" x2="826.40" y2="550" stroke="#314a6c" stroke-width="1"/>
+<text x="826.40" y="575" text-anchor="middle" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="13">2022</text>
+<line x1="1010.00" y1="192" x2="1010.00" y2="550" stroke="#314a6c" stroke-width="1"/>
+<text x="1010.00" y="575" text-anchor="middle" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="13">2025</text>
+<text x="27" y="371" transform="rotate(-90 27 371)" text-anchor="middle" fill="#f1f4f8" font-family="Arial, sans-serif" font-size="13">Share of new car sales (%)</text>
+<text x="1044" y="178" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="12" font-weight="700">LATEST-YEAR RANKING</text>
+<path d="M 92.00 549.96 L 153.20 549.88 L 214.40 549.74 L 275.60 549.66 L 336.80 548.53 L 398.00 546.06 L 459.20 544.63 L 520.40 541.41 L 581.60 533.17 L 642.80 532.10 L 704.00 529.59 L 765.20 492.72 L 826.40 446.18 L 887.60 413.96 L 948.80 378.16 L 1010.00 360.26" fill="none" stroke="#9ecbff" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1010.00" cy="360.26" r="4.5" fill="#9ecbff" stroke="#172b4d" stroke-width="1.5"/>
+<path d="M 153.20 549.11 L 214.40 548.96 L 275.60 549.00 L 336.80 546.74 L 398.00 541.77 L 459.20 546.96 L 520.40 547.85 L 581.60 542.48 L 642.80 534.96 L 704.00 492.72 L 765.20 424.70 L 826.40 413.96 L 887.60 385.32 L 948.80 349.52 L 1010.00 295.82" fill="none" stroke="#ff8a75" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1010.00" cy="295.82" r="4.5" fill="#ff8a75" stroke="#172b4d" stroke-width="1.5"/>
+<path d="M 153.20 549.91 L 214.40 549.39 L 275.60 549.25 L 336.80 548.53 L 398.00 547.85 L 459.20 545.70 L 520.40 540.69 L 581.60 533.17 L 642.80 525.30 L 704.00 485.56 L 765.20 439.02 L 826.40 413.96 L 887.60 356.68 L 948.80 371.00 L 1010.00 345.94" fill="none" stroke="#f5a65b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1010.00" cy="345.94" r="4.5" fill="#f5a65b" stroke="#172b4d" stroke-width="1.5"/>
+<path d="M 214.40 548.82 L 275.60 544.99 L 336.80 541.41 L 398.00 536.04 L 459.20 527.45 L 520.40 499.88 L 581.60 478.40 L 642.80 456.92 L 704.00 363.84 L 765.20 299.40 L 826.40 302.98 L 887.60 295.82 L 948.80 396.06 L 1010.00 328.04" fill="none" stroke="#b39ddb" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1010.00" cy="328.04" r="4.5" fill="#b39ddb" stroke="#172b4d" stroke-width="1.5"/>
+<path d="M 92.00 549.91 L 153.20 549.43 L 214.40 546.42 L 275.60 530.31 L 336.80 536.04 L 398.00 537.47 L 459.20 510.62 L 520.40 527.09 L 581.60 527.80 L 642.80 496.30 L 704.00 460.50 L 765.20 446.18 L 826.40 424.70 L 887.60 392.48 L 948.80 378.16 L 1010.00 342.36" fill="none" stroke="#f48fb1" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1010.00" cy="342.36" r="4.5" fill="#f48fb1" stroke="#172b4d" stroke-width="1.5"/>
+<path d="M 92.00 549.00 L 153.20 544.99 L 214.40 538.90 L 275.60 529.24 L 336.80 496.30 L 398.00 471.24 L 459.20 446.18 L 520.40 410.38 L 581.60 374.58 L 642.80 349.52 L 704.00 281.50 L 765.20 242.12 L 826.40 231.38 L 887.60 227.80 L 948.80 220.64 L 1010.00 202.74" fill="none" stroke="#58c4dd" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1010.00" cy="202.74" r="4.5" fill="#58c4dd" stroke="#172b4d" stroke-width="1.5"/>
+<path d="M 765.20 514.56 L 826.40 446.18 L 887.60 320.88 L 948.80 285.08 L 1010.00 306.56" fill="none" stroke="#f7c66a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1010.00" cy="306.56" r="4.5" fill="#f7c66a" stroke="#172b4d" stroke-width="1.5"/>
+<path d="M 92.00 550.00 L 153.20 549.81 L 214.40 548.89 L 275.60 548.10 L 336.80 544.99 L 398.00 541.41 L 459.20 537.83 L 520.40 531.74 L 581.60 522.79 L 642.80 510.62 L 704.00 435.44 L 765.20 396.06 L 826.40 356.68 L 887.60 335.20 L 948.80 342.36 L 1010.00 331.62" fill="none" stroke="#9ad29a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1010.00" cy="331.62" r="4.5" fill="#9ad29a" stroke="#172b4d" stroke-width="1.5"/>
+<path d="M 92.00 549.96 L 153.20 549.74 L 214.40 549.39 L 275.60 548.96 L 336.80 548.42 L 398.00 547.57 L 459.20 546.60 L 520.40 544.99 L 581.60 541.05 L 642.80 540.33 L 704.00 534.25 L 765.20 516.71 L 826.40 496.30 L 887.60 485.56 L 948.80 474.82 L 1010.00 460.50" fill="none" stroke="#c3cfdd" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="5 5"/>
+<circle cx="1010.00" cy="460.50" r="4.5" fill="#c3cfdd" stroke="#172b4d" stroke-width="1.5"/>
+<circle cx="1053" cy="200" r="5" fill="#58c4dd"/>
+<text x="1068" y="205" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="12">01</text>
+<text x="1090" y="205" fill="#f1f4f8" font-family="Arial, sans-serif" font-size="14">Norway</text>
+<text x="1328" y="205" text-anchor="end" fill="#58c4dd" font-family="Arial, sans-serif" font-size="14" font-weight="700">97%</text>
+<circle cx="1053" cy="237" r="5" fill="#ff8a75"/>
+<text x="1068" y="242" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="12">02</text>
+<text x="1090" y="242" fill="#f1f4f8" font-family="Arial, sans-serif" font-size="14">Denmark</text>
+<text x="1328" y="242" text-anchor="end" fill="#ff8a75" font-family="Arial, sans-serif" font-size="14" font-weight="700">71%</text>
+<circle cx="1053" cy="274" r="5" fill="#f7c66a"/>
+<text x="1068" y="279" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="12">03</text>
+<text x="1090" y="279" fill="#f1f4f8" font-family="Arial, sans-serif" font-size="14">Nepal</text>
+<text x="1328" y="279" text-anchor="end" fill="#f7c66a" font-family="Arial, sans-serif" font-size="14" font-weight="700">68%</text>
+<circle cx="1053" cy="311" r="5" fill="#b39ddb"/>
+<text x="1068" y="316" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="12">04</text>
+<text x="1090" y="316" fill="#f1f4f8" font-family="Arial, sans-serif" font-size="14">Iceland</text>
+<text x="1328" y="316" text-anchor="end" fill="#b39ddb" font-family="Arial, sans-serif" font-size="14" font-weight="700">62%</text>
+<circle cx="1053" cy="348" r="5" fill="#9ad29a"/>
+<text x="1068" y="353" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="12">05</text>
+<text x="1090" y="353" fill="#f1f4f8" font-family="Arial, sans-serif" font-size="14">Sweden</text>
+<text x="1328" y="353" text-anchor="end" fill="#9ad29a" font-family="Arial, sans-serif" font-size="14" font-weight="700">61%</text>
+<circle cx="1053" cy="385" r="5" fill="#f48fb1"/>
+<text x="1068" y="390" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="12">06</text>
+<text x="1090" y="390" fill="#f1f4f8" font-family="Arial, sans-serif" font-size="14">Netherlands</text>
+<text x="1328" y="390" text-anchor="end" fill="#f48fb1" font-family="Arial, sans-serif" font-size="14" font-weight="700">58%</text>
+<circle cx="1053" cy="422" r="5" fill="#f5a65b"/>
+<text x="1068" y="427" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="12">07</text>
+<text x="1090" y="427" fill="#f1f4f8" font-family="Arial, sans-serif" font-size="14">Finland</text>
+<text x="1328" y="427" text-anchor="end" fill="#f5a65b" font-family="Arial, sans-serif" font-size="14" font-weight="700">57%</text>
+<circle cx="1053" cy="459" r="5" fill="#9ecbff"/>
+<text x="1068" y="464" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="12">08</text>
+<text x="1090" y="464" fill="#f1f4f8" font-family="Arial, sans-serif" font-size="14">China</text>
+<text x="1328" y="464" text-anchor="end" fill="#9ecbff" font-family="Arial, sans-serif" font-size="14" font-weight="700">53%</text>
+<line x1="1045" y1="518" x2="1072" y2="518" stroke="#c3cfdd" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="1082" y="523" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="13">World average: 25%</text>
+<text x="80" y="601" fill="#f1f4f8" font-family="Arial, sans-serif" font-size="16" font-weight="700">POLICY MILESTONES</text>
+<text x="265" y="601" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="12">Selected examples only; timing is context, not proof of cause.</text>
+<rect x="78" y="624" width="390" height="108" rx="9" fill="#20395f" stroke="#395174" stroke-width="1"/>
+<rect x="78" y="624" width="4" height="108" rx="2" fill="#f48fb1"/>
+<text x="96" y="649" fill="#f48fb1" font-family="Arial, sans-serif" font-size="12" font-weight="700">2020-24 · NETHERLANDS</text>
+<text x="96" y="676" fill="#f1f4f8" font-family="Arial, sans-serif" font-size="13">SEPP purchase grants supported private</text>
+<text x="96" y="698" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="13">new and used EV purchases.</text>
+<rect x="515" y="624" width="390" height="108" rx="9" fill="#20395f" stroke="#395174" stroke-width="1"/>
+<rect x="515" y="624" width="4" height="108" rx="2" fill="#9ad29a"/>
+<text x="533" y="649" fill="#9ad29a" font-family="Arial, sans-serif" font-size="12" font-weight="700">2018 · SWEDEN</text>
+<text x="533" y="676" fill="#f1f4f8" font-family="Arial, sans-serif" font-size="13">Bonus-malus system introduced a bonus</text>
+<text x="533" y="698" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="13">for eligible low-emission cars.</text>
+<rect x="952" y="624" width="390" height="108" rx="9" fill="#20395f" stroke="#395174" stroke-width="1"/>
+<rect x="952" y="624" width="4" height="108" rx="2" fill="#9ad29a"/>
+<text x="970" y="649" fill="#9ad29a" font-family="Arial, sans-serif" font-size="12" font-weight="700">2022 · SWEDEN</text>
+<text x="970" y="676" fill="#f1f4f8" font-family="Arial, sans-serif" font-size="13">Climate bonus ended from 8 November;</text>
+<text x="970" y="698" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="13">the incentive was withdrawn.</text>
+<rect x="78" y="750" width="390" height="108" rx="9" fill="#20395f" stroke="#395174" stroke-width="1"/>
+<rect x="78" y="750" width="4" height="108" rx="2" fill="#9ecbff"/>
+<text x="96" y="775" fill="#9ecbff" font-family="Arial, sans-serif" font-size="12" font-weight="700">2022 · CHINA</text>
+<text x="96" y="802" fill="#f1f4f8" font-family="Arial, sans-serif" font-size="13">National purchase-subsidy payments</text>
+<text x="96" y="824" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="13">ended after the 2022 transition.</text>
+<rect x="515" y="750" width="390" height="108" rx="9" fill="#20395f" stroke="#395174" stroke-width="1"/>
+<rect x="515" y="750" width="4" height="108" rx="2" fill="#9ecbff"/>
+<text x="533" y="775" fill="#9ecbff" font-family="Arial, sans-serif" font-size="12" font-weight="700">2023 · CHINA</text>
+<text x="533" y="802" fill="#f1f4f8" font-family="Arial, sans-serif" font-size="13">Purchase-tax exemption extended</text>
+<text x="533" y="824" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="13">through 2027 for new-energy vehicles.</text>
+<rect x="952" y="750" width="390" height="108" rx="9" fill="#20395f" stroke="#395174" stroke-width="1"/>
+<rect x="952" y="750" width="4" height="108" rx="2" fill="#58c4dd"/>
+<text x="970" y="775" fill="#58c4dd" font-family="Arial, sans-serif" font-size="12" font-weight="700">2023 · NORWAY</text>
+<text x="970" y="802" fill="#f1f4f8" font-family="Arial, sans-serif" font-size="13">VAT relief narrowed: the exemption</text>
+<text x="970" y="824" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="13">was capped at the first NOK 500,000.</text>
+<text x="80" y="902" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="12">Source: IEA Global EV Data Explorer, Global EV Outlook 2026. Sales share is not the share of the vehicle fleet.</text>
+<text x="80" y="924" fill="#c3cfdd" font-family="Arial, sans-serif" font-size="12">Policy milestones: IEA Global EV Policy Explorer; Netherlands SEPP: RVO. Incentives interact with prices, supply and charging access.</text>
+</svg>
