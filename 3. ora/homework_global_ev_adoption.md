@@ -1,87 +1,90 @@
-# The EV leaders are moving ahead: who electrified new car sales fastest?
+# Flat, policy shift, take-off? Three EV adoption stories
 
-![Line chart comparing EV shares of new passenger-car sales for the eight leading countries through 2025, with the world average and selected subsidy-policy milestones.](./global_ev_adoption.svg)
+![Three aligned line charts highlight gradual EV sales-share trends, 2020 purchase-incentive changes, and subsequent increases in Germany, China and France.](./global_ev_adoption.svg)
 
-*Figure 1. Countries are ranked by their 2025 share of new passenger-car sales
-that were electric. Policy cards show selected incentive changes, not proven
-causes of the adoption trends.*
+*Figure 1. The muted segment shows the selected pre-policy period. The dashed
+line marks a 2020 policy change; the brighter segment shows the later trend.
+The sequence is suggestive, not proof of causation.*
 
 ## Executive summary
 
-- Norway led the countries in the IEA series in 2025: **97%** of new passenger
-  cars sold were electric. Denmark followed at **71%**, Nepal at **68%**, and
-  Iceland at **62%**.
-- The global share was **25%**. China reached **53%**, Sweden **61%**, the
-  Netherlands **58%**, and Finland **57%**.
-- Norway's EV sales share rose from **22% in 2015** to **97% in 2025**. China's
-  climbed from **1.1% to 53%** over the same period.
-- The policy panel highlights selected purchase grants, tax relief and
-  incentive changes that overlapped with these market shifts. The chart cannot
-  show that any one policy caused a change.
+- **Germany is a strong example of the pattern:** the EV share of new passenger
+  car sales moved from **0.7% in 2015 to 3.0% in 2019**. After the federal
+  purchase grant was doubled in 2020, the share reached **31% in 2022**—a
+  **28-percentage-point** increase from 2019.
+- In China, the share rose gradually from **4.7% in 2018 to 5.7% in 2020**.
+  China extended purchase subsidies through 2022 that year; the share then
+  reached **29% in 2022**.
+- France followed a similar, if less dramatic, sequence: **2.7% in 2019**,
+  followed by a larger purchase bonus in 2020 and **20% in 2022**.
+- The close timing is worth investigating, but the chart cannot establish that
+  subsidies alone caused these increases. All three policies overlapped with
+  the pandemic-era market and economic changes.
 
 ## The story behind the data
 
-Electric-car adoption accelerated in very different markets. Norway is the
-clearest high-share leader: electric cars rose from roughly one in five new
-sales in 2015 to nearly all new sales in 2025. Several other European markets
-also passed the halfway mark. China reached 53% in 2025, making it a major
-electric-car market as well as a fast-growing one.
+This version asks a narrower question than a leaderboard: **where was the EV
+sales share comparatively slow, what purchase support changed, and what
+happened afterward?** It focuses on Germany, China and France because their
+series show a relatively gradual pre-period followed by a large rise after a
+notable 2020 incentive change.
 
-Nepal is a striking recent entrant in the top group. Its reported share rose
-from **29% in 2022** to **74% in 2024**, then eased to **68% in 2025**. That
-variation is a reminder that a high sales share can change quickly and that a
-single year's ranking does not tell the whole story.
+Germany is the clearest illustration. Its new-car EV share stayed below 3%
+through 2018 and was 3% in 2019. In 2020 Germany introduced the Innovation
+Premium, doubling the federal portion of the environmental purchase bonus for
+eligible cars. The share was **14% in 2020**, **26% in 2021**, and **31% in
+2022**. The policy and subsequent acceleration line up in time, making Germany
+a reasonable example to explore—not proof that the bonus explains the whole
+rise.
 
-The policy milestones offer useful context for interpreting the lines. The
-Netherlands' SEPP program supported private purchases of new and used electric
-cars; Sweden withdrew its climate bonus in November 2022; China ended its
-national purchase-subsidy program after 2022 but extended purchase-tax relief;
-and Norway narrowed its VAT exemption for more expensive EVs in 2023. These
-policies can change the cost of choosing an EV, but their timing alone does not
-measure their effect.
+China's series was also modest through 2020: 4.7% in 2018, 5.0% in 2019 and
+5.7% in 2020. In April 2020, the government extended purchase subsidies through
+2022. China's EV sales share rose to 16% in 2021 and 29% in 2022. This is a
+similar sequence, though supply, model availability, charging, and other
+industrial policies also matter.
+
+France provides another useful comparison. Its share was 2.7% in 2019, then
+rose to 11% in 2020 and 20% in 2022. As part of its 2020 recovery measures,
+France increased its purchase bonus for eligible electric cars. The annual
+series cannot tell us which months the change affected, or separate this bonus
+from the broader forces behind the common 2020–22 acceleration.
 
 ## Reading the visualization
 
-- Each line shows **EV sales share**: electric vehicles as a percentage of new
-  passenger-car sales in that year. In this IEA series, EV includes
-  battery-electric and plug-in hybrid cars.
-- The eight country lines are selected by their reported share in the latest
-  year, **2025**. The right-hand list gives their 2025 ranking and values.
-- The dashed line is the IEA world average. The vertical scale is a percentage
-  from 0 to 100.
-- A missing early observation is left blank rather than interpolated. In
-  particular, the plotted Nepal series starts when IEA observations are
-  available.
-- Policy cards are selected examples, not a complete inventory of each
-  country's support. They distinguish direct purchase grants from tax relief
-  and policy withdrawals.
+- Each row uses the same **0–60%** vertical scale and the same year axis.
+- The gray line and lightly shaded band highlight the selected pre-policy
+  period. The dashed vertical marker identifies the **2020 policy change**.
+  The country-colored line shows the later trajectory.
+- **pp** means percentage points. For Germany, the highlighted post-period
+  change is from 3% in 2019 to 31% in 2022: **+28 percentage points** (not a
+  28% relative increase).
+- Each point is the annual EV share of new passenger-car sales. EV includes
+  battery-electric and plug-in hybrid cars in the IEA series.
+- These are selected case studies, not an automatic ranking of which country
+  had the most effective policy.
 
 ## Interpretation and limitations
 
-This is a measure of the **flow of new car sales**, not the percentage of all
-cars on the road that are electric and not the total number of EVs sold. Small
-markets can lead on share while larger markets sell many more vehicles in
-absolute terms. For that reason, China's 53% should not be read as a smaller
-market than Norway's 97% in vehicle count.
+The chart makes policy timing and adoption changes easy to compare, but does
+not estimate a causal effect. A rising line after a policy is consistent with
+the policy helping; it does not tell us how much adoption would have risen
+without it. In particular, all three examples involve policies around 2020,
+when the pandemic, stimulus programs, vehicle supply, prices and consumer
+preferences were also changing.
 
-The policy dates are context, not a causal analysis. Adoption is also shaped by
-vehicle prices and availability, charging networks, fuel prices, income,
-taxation, regulation and consumer preferences. Policies may be introduced,
-changed or withdrawn alongside several of these factors. The chart cannot
-isolate a subsidy's contribution or show what would have happened without it.
-
-The 2026 release provides historical observations through 2025. Country
-coverage and the earliest available year differ, and later editions may revise
-historical values. The checked-in CSV makes this chart reproducible against the
-same snapshot.
+The policy announcement and the adoption data are annual, while policy changes
+often took effect partway through a year. A marked 2020 change should therefore
+be read as a year-level comparison, not a precise before/after experiment. The
+sales-share measure also describes new-car purchases, not the share of the
+vehicle fleet that is electric or total vehicles sold.
 
 ## Data and reproducibility
 
-The adoption series is the IEA's *Global EV Data Explorer*, published with the
-2026 *Global EV Outlook*. The local CSV contains the IEA-derived historical
-passenger-car observations, including the world series, used to create the
-figure. It is a filtered snapshot of the publicly shared 2026 IEA sales-share
-series; its header records the source and attribution.
+The country series comes from the IEA's *Global EV Data Explorer*, published
+with the 2026 *Global EV Outlook*. The local CSV is a filtered snapshot of the
+publicly shared IEA-derived 2026 historical sales-share data. It covers
+passenger cars through 2025 and is stored with source and attribution details
+in its header.
 
 From the repository root:
 
@@ -102,14 +105,15 @@ checked-in CSV and needs no network access.
 2. IEA. *Global EV Data Explorer*. Historical country sales-share series and
    data definitions. <https://www.iea.org/data-and-statistics/data-tools/global-ev-data-explorer>
 3. Environment Dashboard. *Electric share of new vehicle sales*. CC BY 4.0
-   derived series used as the snapshot intermediary for this local extract.
+   derived series used as the snapshot intermediary.
    <https://environmentdashboard.org/data/ev/iea/sales-share>
 
 ### Policy context
 
-4. IEA. *Global EV Policy Explorer*. Country policy records for Norway, Sweden
-   and China. <https://www.iea.org/policies>
-5. Netherlands Enterprise Agency (RVO). *Subsidieregeling Elektrische
-   Personenauto's Particulieren (SEPP)*. Scheme timing and eligibility,
-   including the final application date in December 2024.
-   <https://www.rvo.nl/subsidies-financiering/sepp>
+4. German Federal Office for Economic Affairs and Export Control (BAFA).
+   *Environmental Bonus (Umweltbonus)*. Program information and grant rules.
+   <https://www.bafa.de/DE/Energie/Energieeffizienz/Elektromobilitaet/Umweltbonus/umweltbonus_node.html>
+5. IEA. *Global EV Policy Explorer*. Country policy records for Germany, China
+   and France. <https://www.iea.org/policies>
+6. French Ministry for the Ecological Transition. *Electric-vehicle purchase
+   bonus*. <https://www.ecologie.gouv.fr/politiques-publiques/bonus-ecologique>

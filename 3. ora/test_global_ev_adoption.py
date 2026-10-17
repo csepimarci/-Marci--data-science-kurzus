@@ -1,8 +1,8 @@
 import unittest
 
 from global_ev_adoption import (
+    case_study_summaries,
     load_rows,
-    rank_countries,
     render_svg,
     summarize,
 )
@@ -11,46 +11,57 @@ from global_ev_adoption import (
 class GlobalEVAdoptionTests(unittest.TestCase):
     def setUp(self):
         self.rows = [
-            {"country_code": "NOR", "year": 2024, "ev_sales_share_percent": 92},
-            {"country_code": "NOR", "year": 2025, "ev_sales_share_percent": 97},
-            {"country_code": "CHN", "year": 2024, "ev_sales_share_percent": 48},
-            {"country_code": "CHN", "year": 2025, "ev_sales_share_percent": 53},
-            {"country_code": "WLD", "year": 2024, "ev_sales_share_percent": 22},
-            {"country_code": "WLD", "year": 2025, "ev_sales_share_percent": 25},
+            {"country_code": "DEU", "year": 2015, "ev_sales_share_percent": 0.7},
+            {"country_code": "DEU", "year": 2019, "ev_sales_share_percent": 3},
+            {"country_code": "DEU", "year": 2020, "ev_sales_share_percent": 14},
+            {"country_code": "DEU", "year": 2022, "ev_sales_share_percent": 31},
+            {"country_code": "CHN", "year": 2018, "ev_sales_share_percent": 4.7},
+            {"country_code": "CHN", "year": 2020, "ev_sales_share_percent": 5.7},
+            {"country_code": "CHN", "year": 2022, "ev_sales_share_percent": 29},
+            {"country_code": "FRA", "year": 2015, "ev_sales_share_percent": 1.2},
+            {"country_code": "FRA", "year": 2019, "ev_sales_share_percent": 2.7},
+            {"country_code": "FRA", "year": 2020, "ev_sales_share_percent": 11},
+            {"country_code": "FRA", "year": 2022, "ev_sales_share_percent": 20},
         ]
 
-    def test_latest_year_ranking_excludes_world_benchmark(self):
-        ranking = rank_countries(self.rows)
+    def test_case_summaries_measure_percentage_point_change(self):
+        summaries = case_study_summaries(self.rows)
         self.assertEqual(
-            [(item["country"], item["share"]) for item in ranking],
-            [("Norway", 97), ("China", 53)],
+            [case["country"] for case in summaries],
+            ["Germany", "China", "France"],
         )
+        self.assertAlmostEqual(summaries[0]["post_change"], 28)
+        self.assertAlmostEqual(summaries[1]["post_change"], 23.3)
+        self.assertAlmostEqual(summaries[2]["post_change"], 17.3)
 
-    def test_summary_uses_latest_global_observation(self):
+    def test_summary_retains_annual_data_bounds(self):
         summary = summarize(self.rows)
-        self.assertEqual(summary["first_year"], 2024)
-        self.assertEqual(summary["latest_year"], 2025)
-        self.assertEqual(summary["world_share"], 25)
+        self.assertEqual(summary["first_year"], 2015)
+        self.assertEqual(summary["latest_year"], 2022)
+        self.assertEqual(len(summary["case_studies"]), 3)
 
-    def test_chart_explains_share_measure_and_policy_context(self):
+    def test_chart_highlights_policy_then_rising_trajectory(self):
         svg = render_svg(self.rows, summarize(self.rows))
-        self.assertIn("Where electric cars took hold first", svg)
-        self.assertIn("Share of new car sales (%)", svg)
-        self.assertIn("World average: 25%", svg)
-        self.assertIn("POLICY MILESTONES", svg)
-        self.assertIn("Netherlands", svg)
-        self.assertIn("not proof of cause", svg)
-        self.assertIn("<svg", svg)
+        self.assertIn("Flat… policy change… then the EV share climbs", svg)
+        self.assertIn("Germany", svg)
+        self.assertIn("purchase grant doubled", svg)
+        self.assertIn("+28.0 pp by 2022", svg)
+        self.assertIn("POLICY · 2020", svg)
+        self.assertIn("same 0–60% scale", svg)
+        self.assertIn("not proof", svg)
+        self.assertNotIn("LATEST-YEAR RANKING", svg)
 
-    def test_snapshot_ranks_expected_2025_leaders(self):
+    def test_snapshot_has_all_policy_case_observations(self):
         rows = load_rows()
-        summary = summarize(rows)
-        self.assertEqual(summary["latest_year"], 2025)
-        self.assertEqual(
-            [item["country_code"] for item in summary["ranked_countries"]],
-            ["NOR", "DNK", "NPL", "ISL", "SWE", "NLD", "FIN", "CHN"],
-        )
-        self.assertEqual(summary["world_share"], 25)
+        summaries = case_study_summaries(rows)
+        by_country = {case["country_code"]: case for case in summaries}
+        self.assertEqual(by_country["DEU"]["baseline_end_share"], 3)
+        self.assertEqual(by_country["DEU"]["post_end_share"], 31)
+        self.assertAlmostEqual(by_country["DEU"]["post_change"], 28)
+        self.assertEqual(by_country["CHN"]["baseline_end_share"], 5.7)
+        self.assertEqual(by_country["CHN"]["post_end_share"], 29)
+        self.assertEqual(by_country["FRA"]["baseline_end_share"], 2.7)
+        self.assertEqual(by_country["FRA"]["post_end_share"], 20)
 
 
 if __name__ == "__main__":
