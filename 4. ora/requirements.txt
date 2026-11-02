@@ -1,5 +1,0 @@
-pandas>=3.0
-scikit-learn>=1.9
-xgboost>=3.4
-matplotlib>=3.11
-jupyter
